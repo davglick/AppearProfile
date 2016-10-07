@@ -7,19 +7,132 @@
 //
 
 import UIKit
+import Firebase
+import FBSDKLoginKit
+import FirebaseAuth
+import FirebaseStorage
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    
+    @IBOutlet var facebookLoginView: UIView!
+    @IBOutlet var faceBookLogin: FBSDKLoginButton!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+      //  self.faceBookLogin.isHidden = true
+        
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let user = user {
+                // User is signed in.
+                // Take to Profile Page
+            
+                let mainStoryBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+                let ProfileViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "UserProfile")
+                
+                self.present(ProfileViewController, animated: true, completion:  nil)
+                
+            } else {
+                // No user is signed in.
+                // Show the user the login pop up view
+                
+                //self.faceBookLogin.center = self.view.center
+                self.faceBookLogin.delegate = self
+                self.faceBookLogin.readPermissions = ["public_profile", "email", "user_friends"]
+                self.view!.addSubview(self.faceBookLogin)
+                self.faceBookLogin.isHidden = false
+                
+            }
+        }
+        
+        //self.faceBookLogin.center = self.view.center
+        faceBookLogin.delegate = self
+        self.faceBookLogin.readPermissions = ["public_profile", "email", "user_friends"]
+        self.view!.addSubview(self.faceBookLogin)
+      
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    private var _fbLoginManager: FBSDKLoginManager?
+    
+    var fbLoginManager: FBSDKLoginManager {
+        get {
+            if _fbLoginManager == nil {
+                _fbLoginManager = FBSDKLoginManager()
+            }
+            return _fbLoginManager!
+        }
     }
 
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
+        
+        print("User Logged In")
+    
+        self.faceBookLogin.isHidden = true
+        
+        if(error != nil) {
+            
+            // handle error
+            self.faceBookLogin.isHidden = false
+            
+        } else if(result.isCancelled) {
+            
+            // handle cancel
+            self.faceBookLogin.isHidden = false
+        
+        } else {
+   
+       let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+       
+        }
+            
+        }
+            
+            /*
+       
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            print("User logged in")
+        }
+ */
+        
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        
+        return true
+    }
+    
+    func fetchProfile(uid: String) {
+        print("fetch profile")
+        let parameters = ["fields": "email, first_name, last_name, gender, picture.type(large), verified"]
+        FBSDKGraphRequest(graphPath: "me", parameters: parameters).start { (connection, result, error) in
+            if error != nil {
+                print(error)
 
+                return
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        try! FIRAuth.auth()!.signOut()
+        print("User did logout of Facebook")
+    }
 }
 

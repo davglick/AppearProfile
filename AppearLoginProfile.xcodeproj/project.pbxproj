@@ -13,9 +13,18 @@
 		4E570B8D1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E570B8B1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld */; };
 		4E570B8F1DA2284200E2AC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E570B8E1DA2284200E2AC3F /* Assets.xcassets */; };
 		4E570B921DA2284200E2AC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */; };
+		4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */; };
+		4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */; };
+		4EA8CE341DA2377600AFFC0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8CE331DA2377600AFFC0E /* Podfile */; };
+		4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */; };
+		4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25551DA71B6800EF3CDE /* facebookPopUpView.png */; };
+		4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */; };
+		E0D6C6B4C3DB1221373E2A9C /* Pods_AppearLoginProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		302960D57C7FCFE0D133EFBC /* Pods-AppearLoginProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppearLoginProfile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppearLoginProfile/Pods-AppearLoginProfile.debug.xcconfig"; sourceTree = "<group>"; };
+		4221072A6F8F629821A45100 /* Pods-AppearLoginProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppearLoginProfile.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppearLoginProfile/Pods-AppearLoginProfile.release.xcconfig"; sourceTree = "<group>"; };
 		4E570B811DA2284200E2AC3F /* AppearLoginProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppearLoginProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E570B841DA2284200E2AC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E570B861DA2284200E2AC3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,21 @@
 		4E570B8E1DA2284200E2AC3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E570B911DA2284200E2AC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E570B931DA2284200E2AC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginPopUp.swift; sourceTree = "<group>"; };
+		4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppearLoginProfile.entitlements; sourceTree = "<group>"; };
+		4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4E98677D1DA61C4B0007E162 /* Blair ITC Std.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Blair ITC Std.ttf"; path = "../../Downloads/OnlineWebFonts_COM_96ca96347d9b4ebe52536769ecb40e6f/Blair ITC Std/Blair ITC Std.ttf"; sourceTree = "<group>"; };
+		4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamHTF-Book.ttf"; path = "../../Downloads/iOSAppearApp-master 2/GothamHTF-Book.ttf"; sourceTree = "<group>"; };
+		4E98677F1DA61C9D0007E162 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../Downloads/iOSAppearApp-master 2/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		4E9867801DA61CD60007E162 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Medium.otf"; path = "../../Downloads/SF UI/SF-UI-Text/SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
+		4E9867811DA666A30007E162 /* SFNSDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SFNSDisplay.ttf; path = ../../../../System/Library/Fonts/SFNSDisplay.ttf; sourceTree = "<group>"; };
+		4EA8CE2E1DA2332F00AFFC0E /* AppearLoginBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppearLoginBridgingHeader.h; sourceTree = "<group>"; };
+		4EA8CE331DA2377600AFFC0E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FacebookLoginBlurBG.png; path = ../../Downloads/FacebookLoginBlurBG.png; sourceTree = "<group>"; };
+		4EAE25551DA71B6800EF3CDE /* facebookPopUpView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebookPopUpView.png; path = ../../Downloads/facebookPopUpView.png; sourceTree = "<group>"; };
+		4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "syncopate-regular.ttf"; path = "../../Downloads/iOSAppearApp-master 2/syncopate-regular.ttf"; sourceTree = "<group>"; };
+		4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppearLoginProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D6C6B4C3DB1221373E2A9C /* Pods_AppearLoginProfile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177A164FE5F8EB03B01A1578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				302960D57C7FCFE0D133EFBC /* Pods-AppearLoginProfile.debug.xcconfig */,
+				4221072A6F8F629821A45100 /* Pods-AppearLoginProfile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		28B96C90EF970ED6713FA784 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4E570B781DA2284200E2AC3F = {
 			isa = PBXGroup;
 			children = (
+				4EA8CE331DA2377600AFFC0E /* Podfile */,
+				4EA8CE2E1DA2332F00AFFC0E /* AppearLoginBridgingHeader.h */,
+				4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */,
 				4E570B831DA2284200E2AC3F /* AppearLoginProfile */,
 				4E570B821DA2284200E2AC3F /* Products */,
+				4EAE25521DA7132200EF3CDE /* Images */,
+				177A164FE5F8EB03B01A1578 /* Pods */,
+				4EB2B0851DA4B47B00181DD5 /* Fonts */,
+				28B96C90EF970ED6713FA784 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +105,11 @@
 		4E570B831DA2284200E2AC3F /* AppearLoginProfile */ = {
 			isa = PBXGroup;
 			children = (
+				4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */,
 				4E570B841DA2284200E2AC3F /* AppDelegate.swift */,
 				4E570B861DA2284200E2AC3F /* ViewController.swift */,
+				4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */,
+				4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */,
 				4E570B881DA2284200E2AC3F /* Main.storyboard */,
 				4E570B8E1DA2284200E2AC3F /* Assets.xcassets */,
 				4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */,
@@ -67,6 +119,28 @@
 			path = AppearLoginProfile;
 			sourceTree = "<group>";
 		};
+		4EAE25521DA7132200EF3CDE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4EAE25551DA71B6800EF3CDE /* facebookPopUpView.png */,
+				4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		4EB2B0851DA4B47B00181DD5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4E9867811DA666A30007E162 /* SFNSDisplay.ttf */,
+				4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */,
+				4E98677F1DA61C9D0007E162 /* Montserrat-Regular.ttf */,
+				4E9867801DA61CD60007E162 /* SF-UI-Text-Medium.otf */,
+				4E98677D1DA61C4B0007E162 /* Blair ITC Std.ttf */,
+				4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E570B961DA2284200E2AC3F /* Build configuration list for PBXNativeTarget "AppearLoginProfile" */;
 			buildPhases = (
+				A105D4D080552589B9EC8F03 /* [CP] Check Pods Manifest.lock */,
 				4E570B7D1DA2284200E2AC3F /* Sources */,
 				4E570B7E1DA2284200E2AC3F /* Frameworks */,
 				4E570B7F1DA2284200E2AC3F /* Resources */,
+				18CF26D49B417462A6BBF596 /* [CP] Embed Pods Frameworks */,
+				D5F5EB5358259BBF39CA4A76 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -101,6 +178,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = YNE7SAJRJY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -129,11 +211,63 @@
 			files = (
 				4E570B921DA2284200E2AC3F /* LaunchScreen.storyboard in Resources */,
 				4E570B8F1DA2284200E2AC3F /* Assets.xcassets in Resources */,
+				4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */,
+				4EA8CE341DA2377600AFFC0E /* Podfile in Resources */,
 				4E570B8A1DA2284200E2AC3F /* Main.storyboard in Resources */,
+				4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */,
+				4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18CF26D49B417462A6BBF596 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppearLoginProfile/Pods-AppearLoginProfile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A105D4D080552589B9EC8F03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5F5EB5358259BBF39CA4A76 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppearLoginProfile/Pods-AppearLoginProfile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E570B7D1DA2284200E2AC3F /* Sources */ = {
@@ -142,6 +276,8 @@
 			files = (
 				4E570B871DA2284200E2AC3F /* ViewController.swift in Sources */,
 				4E570B851DA2284200E2AC3F /* AppDelegate.swift in Sources */,
+				4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */,
+				4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */,
 				4E570B8D1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +322,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -236,6 +373,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -263,8 +401,10 @@
 		};
 		4E570B971DA2284200E2AC3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302960D57C7FCFE0D133EFBC /* Pods-AppearLoginProfile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppearLoginProfile/AppearLoginProfile.entitlements;
 				DEVELOPMENT_TEAM = YNE7SAJRJY;
 				INFOPLIST_FILE = AppearLoginProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -276,8 +416,10 @@
 		};
 		4E570B981DA2284200E2AC3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4221072A6F8F629821A45100 /* Pods-AppearLoginProfile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppearLoginProfile/AppearLoginProfile.entitlements;
 				DEVELOPMENT_TEAM = YNE7SAJRJY;
 				INFOPLIST_FILE = AppearLoginProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +448,7 @@
 				4E570B981DA2284200E2AC3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
