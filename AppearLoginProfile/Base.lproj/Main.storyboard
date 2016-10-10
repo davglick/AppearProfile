@@ -3,6 +3,7 @@
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,41 +27,47 @@
                         <viewControllerLayoutGuide type="bottom" id="VVN-5a-dB0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FacebookLoginBlurBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="PqR-I7-Eko">
-                                <frame key="frameInset" minX="-1"/>
+                                <frame key="frameInset" minX="-2" minY="-3" maxX="-5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEX-zy-Y0C">
+                                <frame key="frameInset" minX="1" width="11.50%" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menuFlat@1x"/>
+                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oE-ex-RTh">
-                                <frame key="frameInset" minX="44" height="46.31%" maxX="43" maxY="316"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <frame key="frameInset" minX="48.77%" minY="195" width="294" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="IUO-Et-ncj" kind="embed" id="b64-rL-c5V"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0Z-pY-fLj" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="53.5" height="30" maxX="52" maxY="324"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <frame key="frameInset" minX="49.50%" minY="317" width="276" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.37254901960784315" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEX-zy-Y0C">
-                                <frame key="frameInset" minX="6" minY="7" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Menu"/>
-                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="NwS-vN-Gmg"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NwS-vN-Gmg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ds-hK-rSs"/>
+                            <constraint firstItem="NwS-vN-Gmg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="P4Y-yI-sZe"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="NwS-vN-Gmg" id="hde-45-U6l"/>
                         <outlet property="faceBookLogin" destination="l0Z-pY-fLj" id="lbG-cE-d8H"/>
                         <outlet property="facebookLoginView" destination="2oE-ex-RTh" id="zdq-1f-LsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="105.16304347826087"/>
+            <point key="canvasLocation" x="177" y="105"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="G36-3a-9ec">
@@ -71,10 +78,10 @@
                         <viewControllerLayoutGuide type="bottom" id="nLy-zu-uYi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PwI-1o-3Tx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Og-2I-O0F">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Og-2I-O0F">
                                 <frame key="frameInset" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,9 +90,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Your Profile" id="ywB-hO-0Re">
+                                        <barButtonItem key="leftBarButtonItem" image="menuFlat@1x" id="LW9-dh-fWd">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="CLO-X5-zzV">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="tbG-4P-Wc5">
-                                                <rect key="frame" x="372" y="11" width="22" height="22"/>
+                                                <rect key="frame" x="337" y="11" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="didTapLogout:" destination="JY5-FP-rLP" eventType="touchUpInside" id="K6x-iv-2m5"/>
@@ -95,109 +105,74 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ExG-uE-JvT">
-                                <frame key="frameInset" minX="15.5" height="24.63%" maxX="19.5" maxY="54"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" text="24 Weonga Road, Dover Heights, NSW, Sydney 2030" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qsJ-g7-rei">
-                                        <frame key="frameInset" minX="50" minY="25.89%" height="38.69%" maxX="39"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rc-BV-StF">
-                                        <frame key="frameInset" minX="8" minY="13" height="12.26%" maxX="-3.5"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                        <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raV-E1-kur">
-                                        <frame key="frameInset" minX="6" minY="75.59%" height="20.83%" maxX="7"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
-                                        <state key="normal" title="Address Gallery">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vee-JV-8S8">
-                                <frame key="frameInset" minX="14.5" minY="98.5" height="18.90%" maxX="16.5"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWV-9l-tDB">
+                                <frame key="frameInset" minX="16" minY="123" height="16.82%" maxX="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-na-PVx">
-                                        <frame key="frameInset" minX="29" minY="37" height="29.34%" maxX="32"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="15"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AR-cP-skh">
-                                        <frame key="frameInset" minX="14" minY="70.5" maxX="15" maxY="21"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
-                                        <state key="normal" title="View Profile">
-                                            <color key="titleColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" image="profilePicture" translatesAutoresizingMaskIntoConstraints="NO" id="kRq-Az-tkR">
-                                        <frame key="frameInset" minX="49.85%" minY="-18" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHe-br-gSn">
-                                <frame key="frameInset" minX="15.5" minY="38.25%" height="19.70%" maxX="19.5"/>
+                                <connections>
+                                    <segue destination="Sdg-rh-vsV" kind="embed" id="nKj-DW-nFo"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m50-ky-mEw">
+                                <frame key="frameInset" minX="16" minY="39.43%" height="21.59%" maxX="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEc-S8-J7u">
-                                        <frame key="frameInset" minX="21.50%" minY="11" width="56.73%" height="15.30%"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                        <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhZ-f6-LWT">
-                                        <frame key="frameInset" minY="37.59%" height="31.38%"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="GothamHTF-Book" family="Gotham HTF" pointSize="15"/>
-                                        <state key="normal" title="**** **** **** 9833">
-                                            <color key="titleColor" red="0.15681089740000001" green="0.15681089740000001" blue="0.15681089740000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-SW-XA4">
-                                        <frame key="frameInset" minX="27.05%" width="45.91%" height="22.76%"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
-                                        <state key="normal" title="Payment Gallery">
-                                            <color key="titleColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <connections>
+                                    <segue destination="cvc-KS-cBU" kind="embed" id="cJE-Sw-sAc"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-Nb-LX8">
+                                <frame key="frameInset" minX="16" height="175" maxX="16" maxY="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Ztc-X0-VOj" kind="embed" id="SoW-wk-iRN"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" image="profilePicture" translatesAutoresizingMaskIntoConstraints="NO" id="kRq-Az-tkR">
+                                <frame key="frameInset" minX="49.55%" minY="103" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ua4-rg-FE6">
+                                <frame key="frameInset"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="olY-Kl-D8z">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.89082243144719808" green="0.89082243144719808" blue="0.89082243144719808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="addAddress" destination="raV-E1-kur" id="Nhk-Ke-8XU"/>
-                        <outlet property="addressView" destination="ExG-uE-JvT" id="8Li-B5-ui0"/>
-                        <outlet property="paymentView" destination="nHe-br-gSn" id="33d-Do-GCd"/>
-                        <outlet property="profileName" destination="Sqf-na-PVx" id="0EL-GW-gBZ"/>
+                        <outlet property="addressView" destination="Ort-Nb-LX8" id="tka-LJ-2Em"/>
+                        <outlet property="blurEffect" destination="Ua4-rg-FE6" id="8Z7-JS-lxi"/>
+                        <outlet property="paymentView" destination="m50-ky-mEw" id="1GS-FJ-zgp"/>
                         <outlet property="profilePicture" destination="kRq-Az-tkR" id="GKC-4k-ENp"/>
-                        <outlet property="profileView" destination="Vee-JV-8S8" id="M24-EC-75U"/>
+                        <outlet property="profileView" destination="OMb-su-4K4" id="Mqa-g0-A1g"/>
+                        <outlet property="viewProfile" destination="OMb-su-4K4" id="hxq-HD-hHG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Xi-p9-0FV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="OMb-su-4K4">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="262"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkX-pY-abq">
+                            <state key="normal" title="logout"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.85191031678082196" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="WkX-pY-abq" firstAttribute="leading" secondItem="OMb-su-4K4" secondAttribute="leading" constant="91" id="0gY-bl-bdL"/>
+                        <constraint firstItem="WkX-pY-abq" firstAttribute="top" secondItem="OMb-su-4K4" secondAttribute="top" constant="232" id="3ZV-6M-f3Q"/>
+                        <constraint firstAttribute="trailing" secondItem="WkX-pY-abq" secondAttribute="trailing" constant="91" id="Dpv-NB-xx9"/>
+                        <constraint firstAttribute="bottom" secondItem="WkX-pY-abq" secondAttribute="bottom" id="uES-Vk-pgy"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="859.4202898550725" y="105.16304347826087"/>
+            <point key="canvasLocation" x="858.39999999999998" y="104.7976011994003"/>
         </scene>
         <!--Facebook Login Pop Up-->
         <scene sceneID="tY3-kW-PSs">
@@ -208,20 +183,20 @@
                         <viewControllerLayoutGuide type="bottom" id="Dcf-CV-GWF"/>
                     </layoutGuides>
                     <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="4rc-Wj-qpd">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="194.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="294" height="159"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePicture" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-eQ-qSO">
-                                <frame key="frameInset" minX="49.92%" minY="20" width="34.5" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login or Register an account with Facebook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7je-2h-C6q">
-                                <frame key="frameInset" minX="44" minY="53.15%" height="67.5" maxX="44.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login or Register an account with Facebook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7je-2h-C6q">
+                                <frame key="frameInset" minX="65" minY="51.71%" height="42" maxX="64"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePicture.png" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-eQ-qSO">
+                                <frame key="frameInset" minX="50.00%" minY="20" width="34" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -232,12 +207,147 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6p-mS-K6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="642"/>
+            <point key="canvasLocation" x="176" y="649"/>
+        </scene>
+        <!--Profile View-->
+        <scene sceneID="daz-G1-Ncf">
+            <objects>
+                <viewController id="Sdg-rh-vsV" customClass="ProfileView" customModule="AppearLoginProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zow-cn-LbL"/>
+                        <viewControllerLayoutGuide type="bottom" id="eAF-Lk-Rp8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q17-vG-aGe">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="91.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AR-cP-skh">
+                                <frame key="frameInset" minX="-2.5" minY="47" maxX="1.5" maxY="-8.5"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
+                                <state key="normal" title="View Profile">
+                                    <color key="titleColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewProfile:" destination="Sdg-rh-vsV" eventType="touchUpInside" id="GH1-Wf-3IO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-na-PVx">
+                                <frame key="frameInset" minX="24.5" minY="23.5" height="39.71%" maxX="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="profileName" destination="Sqf-na-PVx" id="uEP-Mg-jmQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hye-qM-iUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="-154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JOc-RI-P1E">
+            <objects>
+                <viewController id="cvc-KS-cBU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RJe-Kr-yfv"/>
+                        <viewControllerLayoutGuide type="bottom" id="SnA-RM-c4N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RnA-0X-4o9">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="144"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snH-Rg-SoT">
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-B8-P8F">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** ****" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-XM-2FC">
+                                        <fontDescription key="fontDescription" name="GothamHTF-Book" family="Gotham HTF" pointSize="16"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kTV-1b-eRX">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="MRk-Cs-BkP"/>
+                                            <constraint firstAttribute="width" constant="41" id="iA2-d7-ZAt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjE-FA-wLa">
+                                        <fontDescription key="fontDescription" name="GothamHTF-Book" family="Gotham HTF" pointSize="16"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KjE-FA-wLa" firstAttribute="leading" secondItem="y6j-XM-2FC" secondAttribute="trailing" constant="18" id="0Kb-LU-g9d"/>
+                                    <constraint firstAttribute="trailing" secondItem="KjE-FA-wLa" secondAttribute="trailing" constant="29" id="CxV-0N-Ovg"/>
+                                    <constraint firstAttribute="bottom" secondItem="KjE-FA-wLa" secondAttribute="bottom" constant="10" id="I23-XQ-eeG"/>
+                                    <constraint firstItem="kTV-1b-eRX" firstAttribute="top" secondItem="XbB-B8-P8F" secondAttribute="top" constant="10" id="OHg-3K-GnM"/>
+                                    <constraint firstItem="kTV-1b-eRX" firstAttribute="leading" secondItem="XbB-B8-P8F" secondAttribute="leading" constant="14" id="Upw-NN-dAl"/>
+                                    <constraint firstItem="y6j-XM-2FC" firstAttribute="centerY" secondItem="XbB-B8-P8F" secondAttribute="centerY" constant="4.25" id="g2a-Vm-mMf"/>
+                                    <constraint firstItem="KjE-FA-wLa" firstAttribute="top" secondItem="XbB-B8-P8F" secondAttribute="top" constant="14" id="s7o-l1-4FR"/>
+                                    <constraint firstAttribute="bottom" secondItem="kTV-1b-eRX" secondAttribute="bottom" constant="10" id="sr4-Jg-dWm"/>
+                                    <constraint firstItem="y6j-XM-2FC" firstAttribute="centerX" secondItem="XbB-B8-P8F" secondAttribute="centerX" constant="-13" id="v0V-bU-NGw"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4li-Gm-BGp">
+                                <fontDescription key="fontDescription" name="GothamHTF-Book" family="Gotham HTF" pointSize="12"/>
+                                <state key="normal" title="Payment Gallery">
+                                    <color key="titleColor" red="0.25490196078431371" green="0.7803921568627451" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4li-Gm-BGp" firstAttribute="leading" secondItem="RnA-0X-4o9" secondAttribute="leadingMargin" constant="97" id="4MD-2z-5Gv"/>
+                            <constraint firstItem="snH-Rg-SoT" firstAttribute="leading" secondItem="RnA-0X-4o9" secondAttribute="leadingMargin" constant="32" id="9sT-8B-JoL"/>
+                            <constraint firstItem="XbB-B8-P8F" firstAttribute="centerX" secondItem="RnA-0X-4o9" secondAttribute="centerX" id="KLO-My-s9e"/>
+                            <constraint firstItem="XbB-B8-P8F" firstAttribute="top" secondItem="snH-Rg-SoT" secondAttribute="bottom" constant="21" id="KQW-oT-E4s"/>
+                            <constraint firstItem="SnA-RM-c4N" firstAttribute="top" secondItem="4li-Gm-BGp" secondAttribute="bottom" constant="6" id="Rt8-Yb-mHE"/>
+                            <constraint firstItem="snH-Rg-SoT" firstAttribute="top" relation="lessThanOrEqual" secondItem="RnA-0X-4o9" secondAttribute="topMargin" constant="10" id="VVO-OF-kRf"/>
+                            <constraint firstAttribute="trailing" secondItem="XbB-B8-P8F" secondAttribute="trailing" id="bi8-3w-L2d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="snH-Rg-SoT" secondAttribute="trailing" constant="33" id="gIb-et-s7r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4li-Gm-BGp" secondAttribute="trailing" constant="97" id="oW6-OI-lAG"/>
+                            <constraint firstItem="4li-Gm-BGp" firstAttribute="top" secondItem="XbB-B8-P8F" secondAttribute="bottom" constant="12" id="tde-rr-MRd"/>
+                            <constraint firstItem="XbB-B8-P8F" firstAttribute="centerY" secondItem="RnA-0X-4o9" secondAttribute="centerY" id="vXe-s2-1a6"/>
+                            <constraint firstItem="XbB-B8-P8F" firstAttribute="leading" secondItem="RnA-0X-4o9" secondAttribute="leading" id="xcH-ol-oOC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Txh-C3-UCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="104"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BHl-lW-Pbf">
+            <objects>
+                <viewController id="Ztc-X0-VOj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KcT-Hu-rd3"/>
+                        <viewControllerLayoutGuide type="bottom" id="QiN-rm-rYq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5s5-F5-ZAR">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="175"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enF-lY-LiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="326"/>
         </scene>
     </scenes>
     <resources>
         <image name="FacebookLoginBlurBG.png" width="414" height="736"/>
-        <image name="Menu" width="22" height="17"/>
+        <image name="menuFlat@1x" width="22" height="17"/>
         <image name="profilePicture" width="22" height="22"/>
+        <image name="profilePicture.png" width="22" height="22"/>
+        <image name="visaIcon" width="50" height="30"/>
     </resources>
 </document>

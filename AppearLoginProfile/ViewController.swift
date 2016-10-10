@@ -16,6 +16,8 @@ import FirebaseStorage
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet var facebookLoginView: UIView!
     @IBOutlet var faceBookLogin: FBSDKLoginButton!
     
@@ -76,6 +78,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
         
+        activityIndicator.startAnimating()
+        
         print("User Logged In")
     
         self.faceBookLogin.isHidden = true
@@ -84,11 +88,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             // handle error
             self.faceBookLogin.isHidden = false
+            activityIndicator.stopAnimating()
             
         } else if(result.isCancelled) {
             
             // handle cancel
             self.faceBookLogin.isHidden = false
+            activityIndicator.stopAnimating()
         
         } else {
    

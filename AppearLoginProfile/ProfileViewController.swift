@@ -16,9 +16,12 @@ import FirebaseStorage
 
 class ProfileViewController: UIViewController {
     
-    //@IBOutlet var profilePicture: UIView!
     
-    @IBOutlet var profileName: UILabel!
+    @IBOutlet var closePopUp: UIButton!
+   
+    @IBOutlet var viewProfile: UIView!
+
+    @IBOutlet var blurEffect: UIVisualEffectView!
     
     @IBOutlet var profileView: UIView!
     
@@ -28,7 +31,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var profilePicture: UIImageView!
     
-    @IBOutlet var addAddress: UIButton!
+    
     
     @IBAction func didTapLogout(_ sender: AnyObject) {
         
@@ -47,10 +50,34 @@ class ProfileViewController: UIViewController {
         
         self.present(ViewController, animated: true, completion:  nil)
         
+        
+        // Create the blur pop up effect 
+        
+   
     }
+    
+    var effect: UIVisualEffect!
     
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            
+            
+            ///////////////////////////////////////////////////////
+            ////Creating functionaliy for view profile pop up//////
+            //////////////////////////////////////////////////////
+            
+            
+            
+            // blur effect 
+            
+            effect = blurEffect.effect
+            blurEffect.effect = nil
+            
+            viewProfile.layer.cornerRadius = 4
+            
+            
+            
             
             // Customize the Profile View
             
@@ -70,11 +97,7 @@ class ProfileViewController: UIViewController {
             self.paymentView.layer.cornerRadius = 4
             self.paymentView.layer.borderWidth = 1
             self.paymentView.layer.borderColor = UIColor(red:190/255.0, green:191/255.0, blue:191/255.0, alpha: 0.5).cgColor
-            
-            
-            // Address Gallery Button Rounded
-            
-            self.addAddress.layer.cornerRadius = 3
+
             
             // make the profile picture round
             self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width/2
@@ -91,11 +114,11 @@ class ProfileViewController: UIViewController {
                 let photoUrl = user.photoURL
                 let uid = user.uid
                 
-                self.profileName.text = user.displayName
+              //  self.profileName.text = user.displayName
                 
                 let data = NSData(contentsOf: photoUrl!)
                 self.profilePicture.image = UIImage(data: data! as Data)
-                
+ 
                 
                 // Firebase storage
                 
@@ -150,60 +173,7 @@ class ProfileViewController: UIViewController {
                     }
                 }
         
-                /*
-        // Firebase storage 
-        
-        
-        // Referance to storage 
-        
-        let storage = FIRStorage.storage()
-        
-        // Refeance to our storage service
-        let storageRef = storage.reference(forURL: "gs://appearprofile.appspot.com")
-        
-        var profilePic = FBSDKGraphRequest(graphPath: "me", parameters: ["height": 300, "width": 300, "redircet": false], httpMethod: "GET")
-        
-        profilePic?.start(completionHandler: {(connection, result, error) -> Void in
-            // Handle the result
-            
-            if(error == nil)
-            {
-                
-                let dictionary = result as? NSDictionary
-                let data = dictionary?.object(forKey: "data")
-                
-                let urlPic = ((data as AnyObject).object(forKey: "url"))! as! String
-                
-                if let imageData = NSData(contentsOf: NSURL(string: urlPic)! as URL)
-                    
-                {
-                    
-                    let profilePicRef = storageRef.child(user.uid+"/profile_pic.jpg")
-                   
-                    let uploadTask = profilePicRef.putData(imageData, metadata: nil){
-                        
-                    metadata,error in
-                        
-                    if(error == nil)
-                        
-                    {
-                        let downloadUrl = metadata!.downloadURL
-                    }
-                    
-                    else {
-                        
-                        print("error in downloading image")
-                    }
-                }
-                    
-                    //self.uiimvProfilePic
-            }
-                
-        }
-        
-        })
-        
-        */
+    
                             
     })
             
@@ -213,11 +183,22 @@ class ProfileViewController: UIViewController {
                     
         }
         
-           //     })
+            
+            // function to animate in the profile view
+            
+            func animateIn() {
+                self.view.addSubview(viewProfile)
+                viewProfile.center = self.view.center
+                viewProfile.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+                viewProfile.alpha = 0
                 
+                UIView.animate(withDuration: 0.4) { 
+                    self.blurEffect.effect = self.effect
+                    self.profileView.transform = CGAffineTransform.identity
+                }
                 
-            //    }
-   // }
+            }
+
     
     func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
