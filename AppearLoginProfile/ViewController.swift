@@ -30,6 +30,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let user = user {
+                
                 // User is signed in.
                 // Take to Profile Page
             
@@ -39,10 +40,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.present(ProfileViewController, animated: true, completion:  nil)
                 
             } else {
+                
                 // No user is signed in.
                 // Show the user the login pop up view
                 
-                //self.faceBookLogin.center = self.view.center
                 self.faceBookLogin.delegate = self
                 self.faceBookLogin.readPermissions = ["public_profile", "email", "user_friends"]
                 self.view!.addSubview(self.faceBookLogin)
@@ -51,7 +52,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
         }
         
-        //self.faceBookLogin.center = self.view.center
+        
         faceBookLogin.delegate = self
         self.faceBookLogin.readPermissions = ["public_profile", "email", "user_friends"]
         self.view!.addSubview(self.faceBookLogin)
@@ -68,9 +69,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     var fbLoginManager: FBSDKLoginManager {
         get {
+            
             if _fbLoginManager == nil {
                 _fbLoginManager = FBSDKLoginManager()
+                
             }
+            
             return _fbLoginManager!
         }
     }
@@ -106,16 +110,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
         }
             
-            /*
-       
-        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-                return
-            }
-            print("User logged in")
-        }
- */
+
         
     }
     

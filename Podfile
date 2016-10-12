@@ -13,6 +13,7 @@ target 'AppearLoginProfile' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'Firebase/Storage'
+  pod ‘Canvas’
 
 
 end

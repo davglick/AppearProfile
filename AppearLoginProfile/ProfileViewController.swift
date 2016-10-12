@@ -17,11 +17,11 @@ import FirebaseStorage
 class ProfileViewController: UIViewController {
     
     
-    @IBOutlet var closePopUp: UIButton!
+   // @IBOutlet var closePopUp: UIButton!
    
-    @IBOutlet var viewProfile: UIView!
-
-    @IBOutlet var blurEffect: UIVisualEffectView!
+   
+    
+    @IBOutlet var profileCellView: UIView!
     
     @IBOutlet var profileView: UIView!
     
@@ -31,59 +31,20 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var profilePicture: UIImageView!
     
+    @IBOutlet var profileViewTrigger: UIButton!
     
     
-    @IBAction func didTapLogout(_ sender: AnyObject) {
-        
-        // Signs the user out of the firebase App
-        try! FIRAuth.auth()!.signOut()
-        
-        // Sign use out of Facebook App
-        
-        FBSDKAccessToken.setCurrent(nil)
-        
-        
-        // Go back to the login screen
-        
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
-        let ViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginScreen")
-        
-        self.present(ViewController, animated: true, completion:  nil)
-        
-        
-        // Create the blur pop up effect 
-        
-   
-    }
-    
-    var effect: UIVisualEffect!
     
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            
-            
-            ///////////////////////////////////////////////////////
-            ////Creating functionaliy for view profile pop up//////
-            //////////////////////////////////////////////////////
-            
-            
-            
-            // blur effect 
-            
-            effect = blurEffect.effect
-            blurEffect.effect = nil
-            
-            viewProfile.layer.cornerRadius = 4
-            
-            
-            
+ 
             
             // Customize the Profile View
             
-            self.profileView.layer.cornerRadius = 4
-            self.profileView.layer.borderWidth = 1
-            self.profileView.layer.borderColor = UIColor(red:190/255.0, green:191/255.0, blue:191/255.0, alpha: 0.5).cgColor
+            self.profileCellView.layer.cornerRadius = 4
+            self.profileCellView.layer.borderWidth = 1
+            self.profileCellView.layer.borderColor = UIColor(red:190/255.0, green:191/255.0, blue:191/255.0, alpha: 0.5).cgColor
             
             // Customize Address View
             
@@ -100,25 +61,27 @@ class ProfileViewController: UIViewController {
 
             
             // make the profile picture round
+            
             self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width/2
-            
             self.profilePicture.layer.borderColor = UIColor(red: 160/255, green: 160/255, blue: 159/255, alpha: 1).cgColor
-             self.profilePicture.layer.borderWidth = 0.5
-            
+            self.profilePicture.layer.borderWidth = 0.5
             self.profilePicture.clipsToBounds = true
             
             if let user = FIRAuth.auth()?.currentUser {
+                
                 // User is signed in.
+                
                 let name = user.displayName
                 let email = user.email
                 let photoUrl = user.photoURL
                 let uid = user.uid
                 
+                
               //  self.profileName.text = user.displayName
                 
                 let data = NSData(contentsOf: photoUrl!)
                 self.profilePicture.image = UIImage(data: data! as Data)
- 
+                
                 
                 // Firebase storage
                 
@@ -183,39 +146,29 @@ class ProfileViewController: UIViewController {
                     
         }
         
-            
-            // function to animate in the profile view
-            
-            func animateIn() {
-                self.view.addSubview(viewProfile)
-                viewProfile.center = self.view.center
-                viewProfile.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-                viewProfile.alpha = 0
-                
-                UIView.animate(withDuration: 0.4) { 
-                    self.blurEffect.effect = self.effect
-                    self.profileView.transform = CGAffineTransform.identity
-                }
-                
-            }
-
+    }
     
-    func didReceiveMemoryWarning() {
+
+    @IBAction func showPopUpView(_ sender: AnyObject) {
+        
+        let popUpVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "profileViewPopUp") as! ViewProfilePopUp
+        self.addChildViewController(popUpVc)
+        popUpVc.view.frame = self.view.frame
+        self.view.addSubview(popUpVc.view)
+        popUpVc.didMove(toParentViewController: self)
+    }
+
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 
-}
+
+
+
+
+
+

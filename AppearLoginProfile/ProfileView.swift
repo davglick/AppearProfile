@@ -12,11 +12,15 @@ import FirebaseAuth
 
 class ProfileView: UIViewController {
     
+    
     @IBOutlet var profileName: UILabel!
+    
+    var effect:UIVisualEffect!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         if let user = FIRAuth.auth()?.currentUser {
             // User is signed in.
@@ -25,6 +29,7 @@ class ProfileView: UIViewController {
             
             self.profileName.text = user.displayName
         }
+        
       
     }
 
@@ -34,14 +39,9 @@ class ProfileView: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func profileViewButton(_ sender: AnyObject) {
+        
     }
-    */
 
 }

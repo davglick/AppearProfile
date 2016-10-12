@@ -20,6 +20,13 @@
 		4EA8CE341DA2377600AFFC0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8CE331DA2377600AFFC0E /* Podfile */; };
 		4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */; };
 		4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25551DA71B6800EF3CDE /* facebookPopUpView.png */; };
+		4EB8594F1DAC89B6007CA92F /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E98677F1DA61C9D0007E162 /* Montserrat-Regular.ttf */; };
+		4EB859501DAC89BA007CA92F /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E9867801DA61CD60007E162 /* SF-UI-Text-Medium.otf */; };
+		4EB859511DAC89C5007CA92F /* Blair ITC Std.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E98677D1DA61C4B0007E162 /* Blair ITC Std.ttf */; };
+		4EB859521DAC89C8007CA92F /* syncopate-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */; };
+		4EB859531DAC89CB007CA92F /* GothamHTF-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */; };
+		4EB859541DAC89CE007CA92F /* SFNSDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E9867811DA666A30007E162 /* SFNSDisplay.ttf */; };
+		4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */; };
 		4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */; };
 		4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */; };
 		E0D6C6B4C3DB1221373E2A9C /* Pods_AppearLoginProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */; };
@@ -51,6 +58,7 @@
 		4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FacebookLoginBlurBG.png; path = ../../Downloads/FacebookLoginBlurBG.png; sourceTree = "<group>"; };
 		4EAE25551DA71B6800EF3CDE /* facebookPopUpView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebookPopUpView.png; path = ../../Downloads/facebookPopUpView.png; sourceTree = "<group>"; };
 		4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "syncopate-regular.ttf"; path = "../../Downloads/iOSAppearApp-master 2/syncopate-regular.ttf"; sourceTree = "<group>"; };
+		4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressGalleryView.swift; sourceTree = "<group>"; };
 		4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfilePopUp.swift; sourceTree = "<group>"; };
 		726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppearLoginProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,11 +122,9 @@
 				4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */,
 				4E570B841DA2284200E2AC3F /* AppDelegate.swift */,
 				4E570B861DA2284200E2AC3F /* ViewController.swift */,
-				4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */,
-				4E23C5D31DAB1981001022A9 /* ProfileView.swift */,
 				4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */,
+				4EB859571DAC8FC8007CA92F /* Your Appear */,
 				4E570B881DA2284200E2AC3F /* Main.storyboard */,
-				4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */,
 				4E570B8E1DA2284200E2AC3F /* Assets.xcassets */,
 				4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */,
 				4E570B931DA2284200E2AC3F /* Info.plist */,
@@ -148,6 +154,33 @@
 				4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		4EB859571DAC8FC8007CA92F /* Your Appear */ = {
+			isa = PBXGroup;
+			children = (
+				4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */,
+				4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */,
+				4EB859591DADECA2007CA92F /* Address Gallery */,
+				4EB859581DADEC94007CA92F /* Profile */,
+			);
+			name = "Your Appear";
+			sourceTree = "<group>";
+		};
+		4EB859581DADEC94007CA92F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4E23C5D31DAB1981001022A9 /* ProfileView.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		4EB859591DADECA2007CA92F /* Address Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */,
+			);
+			name = "Address Gallery";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,13 +251,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB859531DAC89CB007CA92F /* GothamHTF-Book.ttf in Resources */,
+				4EB8594F1DAC89B6007CA92F /* Montserrat-Regular.ttf in Resources */,
 				4E5FE3461DA747CC00B05F54 /* profilePicture@3x.png in Resources */,
+				4EB859521DAC89C8007CA92F /* syncopate-regular.ttf in Resources */,
 				4E570B921DA2284200E2AC3F /* LaunchScreen.storyboard in Resources */,
 				4E570B8F1DA2284200E2AC3F /* Assets.xcassets in Resources */,
 				4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */,
+				4EB859541DAC89CE007CA92F /* SFNSDisplay.ttf in Resources */,
 				4EA8CE341DA2377600AFFC0E /* Podfile in Resources */,
 				4E570B8A1DA2284200E2AC3F /* Main.storyboard in Resources */,
+				4EB859511DAC89C5007CA92F /* Blair ITC Std.ttf in Resources */,
 				4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */,
+				4EB859501DAC89BA007CA92F /* SF-UI-Text-Medium.otf in Resources */,
 				4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +327,7 @@
 				4E570B851DA2284200E2AC3F /* AppDelegate.swift in Sources */,
 				4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */,
 				4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */,
+				4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */,
 				4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */,
 				4E23C5D41DAB1981001022A9 /* ProfileView.swift in Sources */,
 				4E570B8D1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld in Sources */,
