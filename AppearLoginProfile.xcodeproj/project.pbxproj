@@ -27,6 +27,8 @@
 		4EB859531DAC89CB007CA92F /* GothamHTF-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */; };
 		4EB859541DAC89CE007CA92F /* SFNSDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E9867811DA666A30007E162 /* SFNSDisplay.ttf */; };
 		4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */; };
+		4EB859611DAF0E13007CA92F /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB859601DAF0E13007CA92F /* ProfileTableViewController.swift */; };
+		4EB859631DAF0EAB007CA92F /* textImputTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB859621DAF0EAB007CA92F /* textImputTableView.swift */; };
 		4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */; };
 		4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */; };
 		E0D6C6B4C3DB1221373E2A9C /* Pods_AppearLoginProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */; };
@@ -59,6 +61,8 @@
 		4EAE25551DA71B6800EF3CDE /* facebookPopUpView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebookPopUpView.png; path = ../../Downloads/facebookPopUpView.png; sourceTree = "<group>"; };
 		4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "syncopate-regular.ttf"; path = "../../Downloads/iOSAppearApp-master 2/syncopate-regular.ttf"; sourceTree = "<group>"; };
 		4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressGalleryView.swift; sourceTree = "<group>"; };
+		4EB859601DAF0E13007CA92F /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		4EB859621DAF0EAB007CA92F /* textImputTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textImputTableView.swift; sourceTree = "<group>"; };
 		4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfilePopUp.swift; sourceTree = "<group>"; };
 		726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppearLoginProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 			children = (
 				4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */,
 				4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */,
+				4EB859601DAF0E13007CA92F /* ProfileTableViewController.swift */,
+				4EB859621DAF0EAB007CA92F /* textImputTableView.swift */,
 				4EB859591DADECA2007CA92F /* Address Gallery */,
 				4EB859581DADEC94007CA92F /* Profile */,
 			);
@@ -323,11 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB859611DAF0E13007CA92F /* ProfileTableViewController.swift in Sources */,
 				4E570B871DA2284200E2AC3F /* ViewController.swift in Sources */,
 				4E570B851DA2284200E2AC3F /* AppDelegate.swift in Sources */,
 				4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */,
 				4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */,
 				4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */,
+				4EB859631DAF0EAB007CA92F /* textImputTableView.swift in Sources */,
 				4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */,
 				4E23C5D41DAB1981001022A9 /* ProfileView.swift in Sources */,
 				4E570B8D1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld in Sources */,

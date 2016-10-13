@@ -34,7 +34,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet var profileViewTrigger: UIButton!
     
     
-    
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -157,6 +156,18 @@ class ProfileViewController: UIViewController {
         self.view.addSubview(popUpVc.view)
         popUpVc.didMove(toParentViewController: self)
     }
+    
+    @IBAction func addressGalleryTrigger(_ sender: AnyObject) {
+        
+        let addressGalleryPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddressGalleryPopUp") as! AddressGalleryView
+        self.addChildViewController(addressGalleryPopUp)
+        addressGalleryPopUp.view.frame = self.view.frame
+        self.view.addSubview(addressGalleryPopUp.view)
+        addressGalleryPopUp.didMove(toParentViewController: self)
+
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
