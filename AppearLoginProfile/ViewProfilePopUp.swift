@@ -33,7 +33,7 @@ class ViewProfilePopUp: UIViewController {
      // Signs the user out of the firebase App
      try! FIRAuth.auth()!.signOut()
      
-     // Sign use out of Facebook App
+     // Sign user out of Facebook App
      
      FBSDKAccessToken.setCurrent(nil)
      

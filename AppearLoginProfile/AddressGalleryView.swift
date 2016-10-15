@@ -8,13 +8,15 @@
 
 import UIKit
 
-class AddressGalleryView: UIViewController {
+class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegate {
     
     var gravity: UIGravityBehavior!
     var animator: UIDynamicAnimator!
     
+    let transition = CircularTransition()
     
-    @IBOutlet var addressGallerView: UIView!
+    
+    @IBOutlet var addressGalleryView: UIView!
 
     @IBOutlet var addressGalleryHeader: UIButton!
     
@@ -27,7 +29,7 @@ class AddressGalleryView: UIViewController {
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         
-        self.addressGallerView.layer.cornerRadius = 4
+        self.addressGalleryView.layer.cornerRadius = 4
         
         // address gallery grey header design
         
@@ -59,14 +61,44 @@ class AddressGalleryView: UIViewController {
             //self.view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.view.alpha = 0
             
-            self.animator = UIDynamicAnimator(referenceView: self.addressGallerView)
-            self.gravity = UIGravityBehavior(items: [self.addressGallerView])
+            self.animator = UIDynamicAnimator(referenceView: self.addressGalleryView)
+            self.gravity = UIGravityBehavior(items: [self.addressGalleryView])
             self.animator.addBehavior(self.gravity)
             
         }) { (success: Bool) in
-            self.addressGallerView.removeFromSuperview()
+            self.addressGalleryView.removeFromSuperview()
             
         }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let mapViewVC = segue.destination as! AddressMapView
+        mapViewVC.transitioningDelegate = self
+        mapViewVC.modalPresentationStyle = .custom
+        
+        
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .present
+        transition.startingPoint = addAddress.center
+        transition.circleColor = addAddress.backgroundColor!
+        
+        return transition
+        
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .dismiss
+        transition.startingPoint = addAddress.center
+        transition.circleColor = addAddress.backgroundColor!
+        
+        return transition
+        
     }
 
     

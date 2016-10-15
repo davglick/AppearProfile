@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:firebaseViewControllerDB.swift">
+   </FileRef>
+   <FileRef
       location = "group:AppearLoginProfile.xcodeproj">
    </FileRef>
    <FileRef

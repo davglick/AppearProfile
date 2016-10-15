@@ -12,8 +12,12 @@ target 'AppearLoginProfile' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod ‘Canvas’
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
 
 
 end

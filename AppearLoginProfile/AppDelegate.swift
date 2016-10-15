@@ -11,6 +11,9 @@ import CoreData
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleMaps
+import GooglePlaces
+import GoogleMapsCore
 
 
 
@@ -19,11 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let googleMapsApiKey = "AIzaSyBsa7G80kOcOMmtVdyDbl5HMfH7qZEtR9E"
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
         
+     GMSServices.provideAPIKey("AIzaSyBsa7G80kOcOMmtVdyDbl5HMfH7qZEtR9E")
+     GMSPlacesClient.provideAPIKey("AIzaSyD4Aip5P67auljQw5WT8PnBkOrf-GFe3dQ")
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
        

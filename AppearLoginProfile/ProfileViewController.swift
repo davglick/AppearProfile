@@ -12,6 +12,7 @@ import Firebase
 import FirebaseAuth
 import FBSDKCoreKit
 import FirebaseStorage
+import FirebaseDatabase
 
 
 class ProfileViewController: UIViewController {
@@ -33,6 +34,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var profileViewTrigger: UIButton!
     
+    var ref: FIRDatabaseReference!
+
     
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -70,10 +73,13 @@ class ProfileViewController: UIViewController {
                 
                 // User is signed in.
                 
-                let name = user.displayName
-                let email = user.email
+                let name: String = user.displayName!
+                let email: String = user.email!
                 let photoUrl = user.photoURL
                 let uid = user.uid
+                
+                
+                
                 
                 
               //  self.profileName.text = user.displayName
@@ -89,6 +95,18 @@ class ProfileViewController: UIViewController {
                 
                 let storage = FIRStorage.storage()
                 
+                // Instanciate the firebase database 
+                
+                ref = FIRDatabase.database().reference()
+                
+                
+                // Facebook user in firebase DB
+                
+                
+                self.ref.child("Users").child(uid).setValue(["userName": name, "UserEmail": email])
+               
+                
+    
                 
                 // Refeance to our storage service
                 let storageRef = storage.reference(forURL: "gs://appearprofile.appspot.com")
@@ -102,6 +120,8 @@ class ProfileViewController: UIViewController {
                     if(error == nil)
                         
                     {
+                        
+ 
                         let dictionary = result as? NSDictionary
                         let data = dictionary?.object(forKey: ("data"))
                         
@@ -111,11 +131,14 @@ class ProfileViewController: UIViewController {
                         if let imageData = NSData(contentsOf: NSURL(string:urlPic)! as URL)
                             
                         {
+                            
+                            
                             let profilePicRef = storageRef.child(user.uid+"/profile_pic.jpg")
                             
                             let uploadTask = profilePicRef.put(imageData as Data, metadata: nil) {
                                 
                                 metadata, error in
+                         
                                 
                                 if(error == nil)
                                 {
@@ -144,7 +167,8 @@ class ProfileViewController: UIViewController {
         // No user is signed in.
                     
         }
-        
+            
+ 
     }
     
 
