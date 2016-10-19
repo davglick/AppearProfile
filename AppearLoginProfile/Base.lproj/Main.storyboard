@@ -237,17 +237,35 @@
                                         </state>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S75-qx-j2s">
-                                        <frame key="frameInset" minX="7.42%" minY="14.63%" width="92.58%" height="64.39%"/>
+                                        <frame key="frameInset" minX="2.37%" minY="14.63%" width="97.33%" height="78.54%"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5HB-Kb-470">
-                                                <rect key="frame" x="0.0" y="28" width="312" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5HB-Kb-470" customClass="AddressCell" customModule="AppearLoginProfile" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="328" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5HB-Kb-470" id="maZ-Ac-Lpc">
-                                                    <frame key="frameInset" width="312" height="43"/>
+                                                    <frame key="frameInset" width="328" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-Aw-JtM">
+                                                            <frame key="frameInset" minY="0.0%" width="85.00%" height="43" maxX="8"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selected" translatesAutoresizingMaskIntoConstraints="NO" id="SGy-tv-hVt">
+                                                            <frame key="frameInset" minX="15" minY="50.00%" width="8" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="addressStringLabel" destination="EJm-Aw-JtM" id="mEa-zM-yRi"/>
+                                                    <outlet property="selectedAddressTick" destination="SGy-tv-hVt" id="erD-Cb-swV"/>
+                                                    <outlet property="selectedCell" destination="SGy-tv-hVt" id="ELU-go-7N5"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -292,6 +310,7 @@
                     </view>
                     <connections>
                         <outlet property="addAddress" destination="Zo7-sY-pJJ" id="aSV-4h-xdo"/>
+                        <outlet property="addressGallery" destination="S75-qx-j2s" id="sEP-iY-dqn"/>
                         <outlet property="addressGalleryHeader" destination="LW8-Qd-Sfw" id="qjL-VL-r0O"/>
                         <outlet property="addressGalleryView" destination="9xC-Jf-Gix" id="dCR-Xf-BCx"/>
                     </connections>
@@ -313,16 +332,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aam-FP-lNm" customClass="GMSMapView">
-                                <frame key="frameInset" minY="44"/>
+                                <frame key="frameInset"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-Mh-tbb">
-                                        <frame key="frameInset" minX="51.43%" minY="85.26%" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.25490196079999999" green="0.78039215689999997" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="add">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OiQ-Qb-3ig">
+                                        <frame key="frameInset" minX="3.20%" minY="42" width="93.20%" height="8.00%"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWo-FW-4OK">
+                                                <frame key="frameInset" minY="50.00%" width="338" height="44" maxX="7.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.28854319196062039" green="0.28854319196062039" blue="0.28854319196062039" alpha="0.94616866438356162" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="autocompleteClicked:" destination="VZp-Ie-rqg" eventType="touchUpInside" id="RfW-Xh-rjf"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a delivery address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIL-Ln-8PR">
+                                                <frame key="frameInset" minX="18.17%" minY="50.00%" width="63.52%" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="2uM-Lq-tyi">
+                                                <frame key="frameInset" minY="51.43%" width="15" height="15" maxX="15.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-Mh-tbb">
+                                        <frame key="frameInset" minX="49.52%" width="60" height="60" maxY="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" red="0.27191604988699392" green="0.81416887044906616" blue="0.34751035698931881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="tick"/>
                                         <connections>
                                             <action selector="dismissSecondVC:" destination="VZp-Ie-rqg" eventType="touchUpInside" id="vl5-sI-pel"/>
                                         </connections>
@@ -330,21 +375,6 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAF-NF-GLf">
-                                <frame key="frameInset" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <navigationItem title="Add Delivery Address" id="rYG-aL-R7z">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="INH-pK-yjK">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="autocompleteClicked:" destination="VZp-Ie-rqg" id="u9W-RJ-FC5"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.78039215689999997" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -357,13 +387,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="J0C-Mh-tbb" id="SFB-Zi-ff0"/>
+                        <outlet property="addAddressView" destination="OiQ-Qb-3ig" id="H1e-nu-y5e"/>
+                        <outlet property="addButton" destination="J0C-Mh-tbb" id="Rwc-Fr-6RL"/>
+                        <outlet property="addressLabel" destination="SIL-Ln-8PR" id="GRv-Tz-1oB"/>
                         <outlet property="mapView" destination="Aam-FP-lNm" id="qQo-7p-i61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5To-xO-1zY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8" y="793.8530734632684"/>
+            <point key="canvasLocation" x="1600.8" y="771.36431784107947"/>
         </scene>
         <!--View Profile Pop Up-->
         <scene sceneID="nJE-G2-eFC">
@@ -587,6 +619,24 @@
             </objects>
             <point key="canvasLocation" x="1473" y="326"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="4PD-Pg-4oj">
+            <objects>
+                <viewController id="s8b-50-19A" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OeY-Zc-zVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="vHh-jF-Z5H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dMT-Vo-wW5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYb-LR-GQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="771"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FacebookLoginBlurBG.png" width="414" height="736"/>
@@ -595,6 +645,9 @@
         <image name="profilePicture" width="22" height="22"/>
         <image name="profilePicture.png" width="22" height="22"/>
         <image name="pullDownArrow@1x" width="22" height="6"/>
+        <image name="search" width="22" height="22"/>
+        <image name="selected" width="22" height="18"/>
+        <image name="tick" width="22" height="22"/>
         <image name="visaIcon" width="50" height="30"/>
     </resources>
 </document>

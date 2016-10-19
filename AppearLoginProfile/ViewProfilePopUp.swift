@@ -13,6 +13,7 @@ import FirebaseStorage
 import Canvas
 import FBSDKLoginKit
 import FBSDKCoreKit
+import AVFoundation
 
 class ViewProfilePopUp: UIViewController {
   
@@ -27,6 +28,7 @@ class ViewProfilePopUp: UIViewController {
     
     @IBOutlet var profilePicture: UIImageView!
     
+    var soundEffect = AVAudioPlayer()
     
      @IBAction func didTapLogout(_ sender: AnyObject) {
      
@@ -44,6 +46,26 @@ class ViewProfilePopUp: UIViewController {
      let ViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginScreen")
      
      self.present(ViewController, animated: true, completion:  nil)
+        
+        
+        let LogoutSound = Bundle.main.path(forResource: "AddSound", ofType: "mp3")
+        
+        if let LogoutSound = LogoutSound {
+            
+            let LogOutSoundURL = NSURL(fileURLWithPath: LogoutSound)
+            
+            do{
+                
+                try soundEffect = AVAudioPlayer(contentsOf: LogOutSoundURL as URL)
+                
+                soundEffect.play()
+                
+            } catch {
+                
+                print("error")
+            }
+        }
+
      
      
      }
@@ -88,6 +110,7 @@ class ViewProfilePopUp: UIViewController {
             let email = user.email
             let photoUrl = user.photoURL
             let uid = user.uid
+           
             
             
             //  Display Profile Name, Photo and Email

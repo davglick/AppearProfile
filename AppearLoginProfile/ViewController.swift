@@ -11,6 +11,7 @@ import Firebase
 import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseStorage
+import FirebaseDatabase
 
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
@@ -20,6 +21,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var facebookLoginView: UIView!
     @IBOutlet var faceBookLogin: FBSDKLoginButton!
+    
+    var ref: FIRDatabaseReference!
     
     
 
@@ -125,6 +128,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).start { (connection, result, error) in
             if error != nil {
                 print(error)
+                
+       // self.ref = FIRDatabase.database().reference()
+                
+       // self.ref.child("Users").child(uid).setValue(["email": email, ])
+                
+                
+                print(parameters)
 
                 return
             }

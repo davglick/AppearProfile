@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
+
 
 class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegate {
     
     var gravity: UIGravityBehavior!
     var animator: UIDynamicAnimator!
     
+    let addressMapView = AddressMapView()
+    
     let transition = CircularTransition()
     
+    let addressMap = AddressMapView()
+
+    
+    @IBOutlet var addressGallery: UITableView!
     
     @IBOutlet var addressGalleryView: UIView!
 
@@ -22,8 +32,45 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
     
     @IBOutlet var addAddress: UIButton!
     
+    
+
+    var addresses = [""]
+    
+    var databaseRef: FIRDatabaseReference!
+    
+    
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Initiate the Firebase database 
+        
+        //databaseRef = FIRDatabase.database().reference().child("Delivery_Address")
+        
+        //databaseRef.observe(.value, with: { (snapshot) in
+            
+         //   var newAddress = [self.addresses]
+            
+           // for item in snapshot.children {
+                
+                //var newAddresses = selectedAddress(snapshot: item as! FIRDataSnapshot)
+                //newAddress.insert(newAddress as! [String], at: 0)
+                
+           // }
+            
+           // self.addresses = newAddress as! [String]
+           // self.addressGallery.reloadData()
+            
+          //  }) { (Error) in
+                
+            //    print(Error.localizedDescription)
+      //  }
+        
+        
+        
         
         // profile View Design
         
@@ -43,10 +90,10 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
         self.addAddress.layer.borderWidth = 0.05
         self.addAddress.clipsToBounds = true
         
-
-
-       
+    // Create an observer to see chages in address table view 
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -70,7 +117,9 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
             
         }
         
-    }
+        }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -110,3 +159,4 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
 
 
 }
+

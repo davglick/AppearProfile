@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E10B4831DB0A25C00E07B84 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10B4821DB0A25C00E07B84 /* CircularTransition.swift */; };
-		4E10B4851DB1BBA100E07B84 /* CircularTransition1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10B4841DB1BBA100E07B84 /* CircularTransition1.swift */; };
+		4E10B4851DB1BBA100E07B84 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10B4841DB1BBA100E07B84 /* CircularTransition.swift */; };
+		4E16948D1DB5AFB800301B77 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E16948C1DB5AFB800301B77 /* AddressCell.swift */; };
+		4E16948F1DB5C38A00301B77 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E16948E1DB5C38A00301B77 /* AddressModel.swift */; };
 		4E23C5D41DAB1981001022A9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23C5D31DAB1981001022A9 /* ProfileView.swift */; };
 		4E570B851DA2284200E2AC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E570B841DA2284200E2AC3F /* AppDelegate.swift */; };
 		4E570B871DA2284200E2AC3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E570B861DA2284200E2AC3F /* ViewController.swift */; };
@@ -18,6 +19,8 @@
 		4E570B921DA2284200E2AC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */; };
 		4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */; };
 		4E5FE3461DA747CC00B05F54 /* profilePicture@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FE3451DA747CC00B05F54 /* profilePicture@3x.png */; };
+		4E69FCC31DB6CE4F00D01986 /* AddSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */; };
+		4E69FCC51DB6D73500D01986 /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCC41DB6D73500D01986 /* Pop.mp3 */; };
 		4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */; };
 		4EA8CE341DA2377600AFFC0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8CE331DA2377600AFFC0E /* Podfile */; };
 		4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */; };
@@ -38,8 +41,9 @@
 /* Begin PBXFileReference section */
 		302960D57C7FCFE0D133EFBC /* Pods-AppearLoginProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppearLoginProfile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppearLoginProfile/Pods-AppearLoginProfile.debug.xcconfig"; sourceTree = "<group>"; };
 		4221072A6F8F629821A45100 /* Pods-AppearLoginProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppearLoginProfile.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppearLoginProfile/Pods-AppearLoginProfile.release.xcconfig"; sourceTree = "<group>"; };
-		4E10B4821DB0A25C00E07B84 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
-		4E10B4841DB1BBA100E07B84 /* CircularTransition1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition1.swift; sourceTree = "<group>"; };
+		4E10B4841DB1BBA100E07B84 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		4E16948C1DB5AFB800301B77 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		4E16948E1DB5C38A00301B77 /* AddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		4E23C5D31DAB1981001022A9 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4E570B811DA2284200E2AC3F /* AppearLoginProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppearLoginProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E570B841DA2284200E2AC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		4E570B931DA2284200E2AC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginPopUp.swift; sourceTree = "<group>"; };
 		4E5FE3451DA747CC00B05F54 /* profilePicture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profilePicture@3x.png"; path = "../Appear Profile/Assets/profilePicture@3x.png"; sourceTree = "<group>"; };
+		4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AddSound.mp3; path = ../../Downloads/AddSound.mp3; sourceTree = "<group>"; };
+		4E69FCC41DB6D73500D01986 /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pop.mp3; path = ../../Downloads/Pop.mp3; sourceTree = "<group>"; };
 		4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppearLoginProfile.entitlements; sourceTree = "<group>"; };
 		4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4E98677D1DA61C4B0007E162 /* Blair ITC Std.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Blair ITC Std.ttf"; path = "../../Downloads/OnlineWebFonts_COM_96ca96347d9b4ebe52536769ecb40e6f/Blair ITC Std/Blair ITC Std.ttf"; sourceTree = "<group>"; };
@@ -106,8 +112,9 @@
 				4EA8CE2E1DA2332F00AFFC0E /* AppearLoginBridgingHeader.h */,
 				4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */,
 				4E570B831DA2284200E2AC3F /* AppearLoginProfile */,
-				4E570B821DA2284200E2AC3F /* Products */,
+				4E69FCC11DB6CE3A00D01986 /* Sounds */,
 				4EAE25521DA7132200EF3CDE /* Images */,
+				4E570B821DA2284200E2AC3F /* Products */,
 				177A164FE5F8EB03B01A1578 /* Pods */,
 				4EB2B0851DA4B47B00181DD5 /* Fonts */,
 				28B96C90EF970ED6713FA784 /* Frameworks */,
@@ -131,14 +138,22 @@
 				4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */,
 				4EB859571DAC8FC8007CA92F /* Your Appear */,
 				4E570B881DA2284200E2AC3F /* Main.storyboard */,
-				4E10B4821DB0A25C00E07B84 /* CircularTransition.swift */,
-				4E10B4841DB1BBA100E07B84 /* CircularTransition1.swift */,
+				4E10B4841DB1BBA100E07B84 /* CircularTransition.swift */,
 				4E570B8E1DA2284200E2AC3F /* Assets.xcassets */,
 				4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */,
 				4E570B931DA2284200E2AC3F /* Info.plist */,
 				4E570B8B1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld */,
 			);
 			path = AppearLoginProfile;
+			sourceTree = "<group>";
+		};
+		4E69FCC11DB6CE3A00D01986 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4E69FCC41DB6D73500D01986 /* Pop.mp3 */,
+				4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		4EAE25521DA7132200EF3CDE /* Images */ = {
@@ -187,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				4EB4C2DB1DAF5C9200691EC4 /* AddressMapView.swift */,
+				4E16948E1DB5C38A00301B77 /* AddressModel.swift */,
+				4E16948C1DB5AFB800301B77 /* AddressCell.swift */,
 				4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */,
 			);
 			name = "Address Gallery";
@@ -263,6 +280,7 @@
 				4EB859531DAC89CB007CA92F /* GothamHTF-Book.ttf in Resources */,
 				4EB8594F1DAC89B6007CA92F /* Montserrat-Regular.ttf in Resources */,
 				4E5FE3461DA747CC00B05F54 /* profilePicture@3x.png in Resources */,
+				4E69FCC51DB6D73500D01986 /* Pop.mp3 in Resources */,
 				4EB859521DAC89C8007CA92F /* syncopate-regular.ttf in Resources */,
 				4E570B921DA2284200E2AC3F /* LaunchScreen.storyboard in Resources */,
 				4E570B8F1DA2284200E2AC3F /* Assets.xcassets in Resources */,
@@ -272,6 +290,7 @@
 				4E570B8A1DA2284200E2AC3F /* Main.storyboard in Resources */,
 				4EB859511DAC89C5007CA92F /* Blair ITC Std.ttf in Resources */,
 				4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */,
+				4E69FCC31DB6CE4F00D01986 /* AddSound.mp3 in Resources */,
 				4EB859501DAC89BA007CA92F /* SF-UI-Text-Medium.otf in Resources */,
 				4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */,
 			);
@@ -332,14 +351,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E16948D1DB5AFB800301B77 /* AddressCell.swift in Sources */,
 				4E570B871DA2284200E2AC3F /* ViewController.swift in Sources */,
 				4EB4C2DC1DAF5C9200691EC4 /* AddressMapView.swift in Sources */,
 				4E570B851DA2284200E2AC3F /* AppDelegate.swift in Sources */,
 				4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */,
 				4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */,
-				4E10B4831DB0A25C00E07B84 /* CircularTransition.swift in Sources */,
-				4E10B4851DB1BBA100E07B84 /* CircularTransition1.swift in Sources */,
+				4E10B4851DB1BBA100E07B84 /* CircularTransition.swift in Sources */,
 				4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */,
+				4E16948F1DB5C38A00301B77 /* AddressModel.swift in Sources */,
 				4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */,
 				4E23C5D41DAB1981001022A9 /* ProfileView.swift in Sources */,
 				4E570B8D1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld in Sources */,
