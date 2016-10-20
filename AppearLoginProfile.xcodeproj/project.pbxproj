@@ -21,6 +21,9 @@
 		4E5FE3461DA747CC00B05F54 /* profilePicture@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FE3451DA747CC00B05F54 /* profilePicture@3x.png */; };
 		4E69FCC31DB6CE4F00D01986 /* AddSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */; };
 		4E69FCC51DB6D73500D01986 /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCC41DB6D73500D01986 /* Pop.mp3 */; };
+		4E69FCC71DB7358100D01986 /* AddressList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E69FCC61DB7358000D01986 /* AddressList.swift */; };
+		4E69FCC91DB7881F00D01986 /* swish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCC81DB7881E00D01986 /* swish.mp3 */; };
+		4E69FCCB1DB788C100D01986 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCCA1DB788C100D01986 /* swipe.mp3 */; };
 		4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */; };
 		4EA8CE341DA2377600AFFC0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8CE331DA2377600AFFC0E /* Podfile */; };
 		4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */; };
@@ -57,6 +60,9 @@
 		4E5FE3451DA747CC00B05F54 /* profilePicture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profilePicture@3x.png"; path = "../Appear Profile/Assets/profilePicture@3x.png"; sourceTree = "<group>"; };
 		4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AddSound.mp3; path = ../../Downloads/AddSound.mp3; sourceTree = "<group>"; };
 		4E69FCC41DB6D73500D01986 /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pop.mp3; path = ../../Downloads/Pop.mp3; sourceTree = "<group>"; };
+		4E69FCC61DB7358000D01986 /* AddressList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressList.swift; sourceTree = "<group>"; };
+		4E69FCC81DB7881E00D01986 /* swish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swish.mp3; path = ../../Downloads/swish.mp3; sourceTree = "<group>"; };
+		4E69FCCA1DB788C100D01986 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swipe.mp3; path = ../../Downloads/swipe.mp3; sourceTree = "<group>"; };
 		4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppearLoginProfile.entitlements; sourceTree = "<group>"; };
 		4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4E98677D1DA61C4B0007E162 /* Blair ITC Std.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Blair ITC Std.ttf"; path = "../../Downloads/OnlineWebFonts_COM_96ca96347d9b4ebe52536769ecb40e6f/Blair ITC Std/Blair ITC Std.ttf"; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				4E69FCC41DB6D73500D01986 /* Pop.mp3 */,
+				4E69FCC81DB7881E00D01986 /* swish.mp3 */,
+				4E69FCCA1DB788C100D01986 /* swipe.mp3 */,
 				4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */,
 			);
 			name = Sounds;
@@ -204,6 +212,7 @@
 				4EB4C2DB1DAF5C9200691EC4 /* AddressMapView.swift */,
 				4E16948E1DB5C38A00301B77 /* AddressModel.swift */,
 				4E16948C1DB5AFB800301B77 /* AddressCell.swift */,
+				4E69FCC61DB7358000D01986 /* AddressList.swift */,
 				4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */,
 			);
 			name = "Address Gallery";
@@ -289,8 +298,10 @@
 				4EA8CE341DA2377600AFFC0E /* Podfile in Resources */,
 				4E570B8A1DA2284200E2AC3F /* Main.storyboard in Resources */,
 				4EB859511DAC89C5007CA92F /* Blair ITC Std.ttf in Resources */,
+				4E69FCCB1DB788C100D01986 /* swipe.mp3 in Resources */,
 				4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */,
 				4E69FCC31DB6CE4F00D01986 /* AddSound.mp3 in Resources */,
+				4E69FCC91DB7881F00D01986 /* swish.mp3 in Resources */,
 				4EB859501DAC89BA007CA92F /* SF-UI-Text-Medium.otf in Resources */,
 				4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */,
 			);
@@ -351,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E69FCC71DB7358100D01986 /* AddressList.swift in Sources */,
 				4E16948D1DB5AFB800301B77 /* AddressCell.swift in Sources */,
 				4E570B871DA2284200E2AC3F /* ViewController.swift in Sources */,
 				4EB4C2DC1DAF5C9200691EC4 /* AddressMapView.swift in Sources */,

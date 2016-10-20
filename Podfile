@@ -18,6 +18,7 @@ target 'AppearLoginProfile' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
+  pod 'LGSideMenuController', '~> 1.0.0'
 
 
 end

@@ -209,9 +209,11 @@ extension AddressMapView: GMSAutocompleteViewControllerDelegate {
             
             let address: String!
             if addressLabel.text == "Add a delivery address" {
-            addressLabel.text = "no address"
-            address = addressLabel.text
+                 addressLabel.text = "no address"
+                 address = addressLabel.text
+            
             } else {
+                
                 address = addressLabel.text
             }
             
@@ -220,17 +222,24 @@ extension AddressMapView: GMSAutocompleteViewControllerDelegate {
                 GeoCoordinate = "No GeoCoOrdiante"
                 geoLocation = GeoCoordinate
             } else {
+                
                 geoLocation = GeoCoordinate
             }
+            
+          
+            
+           
+            
             
             
             let uid = user.uid
             
             // Create add address ref in firebase
            let addRef = DBref.child("Delivery-Address").child(uid)
-            let AddNewAddress = addAddress(addressName: address, DefaultAddress: true, number: "0", GeoLocation: GeoCoordinate)
+            let AddNewAddress = addAddress(addressName: address, DefaultAddress: "false", number: "0", GeoLocation: GeoCoordinate)
             
            addRef.childByAutoId().setValue(AddNewAddress.toAnyObject())
+                
             
             
             //self.DBref.child("Delivery_Address").child(uid).childByAutoId().setValue(["address": selectedAddress, "Number":Int(), "DefaultAddress": Int(), "user": uid, "GeoLocation": GeoCoordinate])

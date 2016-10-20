@@ -48,7 +48,7 @@ class ViewProfilePopUp: UIViewController {
      self.present(ViewController, animated: true, completion:  nil)
         
         
-        let LogoutSound = Bundle.main.path(forResource: "AddSound", ofType: "mp3")
+        let LogoutSound = Bundle.main.path(forResource: "Pop", ofType: "mp3")
         
         if let LogoutSound = LogoutSound {
             

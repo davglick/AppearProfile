@@ -19,16 +19,16 @@ import FirebaseDatabase
 struct addAddress {
     
     var addressName: String!
-    var DefaultAddress: Bool!
+    var DefaultAddress:String!
     var number: String!
     var GeoLocation: String!
     var ref: FIRDatabaseReference?
     var key: String!
     
-    init(addressName: String, DefaultAddress: Bool, number: String, GeoLocation: String, key: String = "") {
+    init(addressName: String, DefaultAddress: String, number: String, GeoLocation: String, key: String = "") {
         
     self.addressName = addressName
-    self.DefaultAddress = true
+    self.DefaultAddress = DefaultAddress
     self.number = number
     self.GeoLocation = GeoLocation
     self.key = key
@@ -42,8 +42,8 @@ struct addAddress {
         
         
         addressName = (snapshot.value as? NSDictionary)?["addressName"] as? String
-        DefaultAddress = (snapshot.value as? NSDictionary)?[true] as? Bool
-        GeoLocation = (snapshot.value as? NSDictionary)? [true] as? String
+        DefaultAddress = (snapshot.value as? NSDictionary)?["default Address"] as? String
+        GeoLocation = (snapshot.value as? NSDictionary)? ["GeoLocation"] as? String
         number = (snapshot.value as? NSDictionary)?["0"] as? String
         self.key = snapshot.key
         self.ref = snapshot.ref
@@ -52,7 +52,7 @@ struct addAddress {
  
     func toAnyObject() -> [String: AnyObject] {
         
-        return ["addressName": addressName as AnyObject , "defaultAddress": Bool() as AnyObject, "number": number as AnyObject, "GeoLocation" : GeoLocation as AnyObject]
+        return ["addressName": addressName as AnyObject , "DefaultAddress": DefaultAddress as AnyObject, "number": number as AnyObject, "GeoLocation" : GeoLocation as AnyObject]
 }
 
 

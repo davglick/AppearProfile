@@ -9,66 +9,87 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
+import AVFoundation
 
 
 
-class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegate {
+class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var gravity: UIGravityBehavior!
     var animator: UIDynamicAnimator!
+    
+  
     
     let addressMapView = AddressMapView()
     
     let transition = CircularTransition()
     
     let addressMap = AddressMapView()
-
     
+       
     @IBOutlet var addressGallery: UITableView!
     
     @IBOutlet var addressGalleryView: UIView!
 
     @IBOutlet var addressGalleryHeader: UIButton!
     
-    @IBOutlet var addAddress: UIButton!
-    
-    
+    @IBOutlet var addAddressButton: UIButton!
 
-    var addresses = [""]
+    @IBOutlet var addressTable: UITableView!
+    
+    var soundEffect = AVAudioPlayer()
+    
+    
+    // Call firebase database and Address Array
+   
+    var addressArray = [addAddress]()
     
     var databaseRef: FIRDatabaseReference!
-    
-    
     
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        addressTable.delegate = self
+        addressTable.dataSource = self
         
-        // Initiate the Firebase database 
         
-        //databaseRef = FIRDatabase.database().reference().child("Delivery_Address")
+    
+        // Initiate the Firebase database
         
-        //databaseRef.observe(.value, with: { (snapshot) in
+         if let user = FIRAuth.auth()?.currentUser {
             
-         //   var newAddress = [self.addresses]
+            let uid = user.uid
             
-           // for item in snapshot.children {
+            //let myTopPostsQuery = (databaseRef.child("Delivery_Address").child(uid)).queryOrdered(byChild: "addressName")
+        
+       databaseRef = FIRDatabase.database().reference().child("Delivery-Address").child(uid)
+         
+        
+            databaseRef.observe(.value, with: { snapshot in
+               
+                var newAddress = [addAddress]()
                 
-                //var newAddresses = selectedAddress(snapshot: item as! FIRDataSnapshot)
-                //newAddress.insert(newAddress as! [String], at: 0)
+                for address in snapshot.children {
+                    
+                    let newAddresses = addAddress(snapshot: address as! FIRDataSnapshot)
+                    newAddress.insert(newAddresses, at:0)
+                }
                 
-           // }
-            
-           // self.addresses = newAddress as! [String]
-           // self.addressGallery.reloadData()
-            
-          //  }) { (Error) in
+                self.addressArray = newAddress
+                self.addressTable.reloadData()
                 
-            //    print(Error.localizedDescription)
-      //  }
+            }) { (Error) in
         
+              print(Error.localizedDescription)
+                
+               }
+        
+        
+        }
         
         
         
@@ -80,24 +101,23 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
         
         // address gallery grey header design
         
-      self.addressGalleryHeader.layer.cornerRadius = 3
+        self.addressGalleryHeader.layer.cornerRadius = 3
         
         
         // add address button design
         
-        self.addAddress.layer.cornerRadius = self.addAddress.frame.size.width/2
-        self.addAddress.layer.borderColor = UIColor(red: 160/255, green: 160/255, blue: 159/255, alpha: 1).cgColor
-        self.addAddress.layer.borderWidth = 0.05
-        self.addAddress.clipsToBounds = true
+        self.addAddressButton.layer.cornerRadius = self.addAddressButton.frame.size.width/2
+        self.addAddressButton.layer.borderColor = UIColor(red: 160/255, green: 160/255, blue: 159/255, alpha: 1).cgColor
+        self.addAddressButton.layer.borderWidth = 0.05
+        self.addAddressButton.clipsToBounds = true
         
-    // Create an observer to see chages in address table view 
         
+        
+  
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
         
     }
     
@@ -117,7 +137,7 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
             
         }
         
-        }
+    }
     
     
     
@@ -133,8 +153,8 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         transition.transitionMode = .present
-        transition.startingPoint = addAddress.center
-        transition.circleColor = addAddress.backgroundColor!
+        transition.startingPoint = addAddressButton.center
+        transition.circleColor = addAddressButton.backgroundColor!
         
         return transition
         
@@ -143,12 +163,13 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         transition.transitionMode = .dismiss
-        transition.startingPoint = addAddress.center
-        transition.circleColor = addAddress.backgroundColor!
+        transition.startingPoint = addAddressButton.center
+        transition.circleColor = addAddressButton.backgroundColor!
         
         return transition
         
     }
+    
 
     
     @IBAction func closeAddressPopUp(_ sender: AnyObject) {
@@ -158,5 +179,74 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
     }
 
 
+// Create an observer to see chages in address table view
+
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+    return addressArray.count 
+        
+
 }
 
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AddressCell
+    
+    // Configure the Cell
+    
+   //cell.textLabel?.text = addressArray[indexPath.row].addressName
+    //cell.addressCellString.text = addressArray[indexPath.row].addressName
+    //cell.selectedAddressTick = addressArray[indexPath.row].DefaultAddress.true
+   
+    
+    cell.addressStringLabel.text = addressArray[indexPath.row].addressName
+    
+    
+    return cell
+
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        
+    
+        
+    
+    }
+
+func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+
+        // Delete the row from the data source
+        let ref = addressArray[indexPath.row].ref
+        ref!.removeValue()
+        addressArray.remove(at: indexPath.row)
+        
+        tableView.deleteRows(at: [indexPath], with: .none)
+        
+        // Trigger sound effect when the add address button is pressed
+        
+        let alertSound = Bundle.main.path(forResource: "swipe", ofType: "mp3")
+        
+        if let alertSound = alertSound {
+            
+            let alertSoundURL = NSURL(fileURLWithPath: alertSound)
+            
+            do{
+                
+                try soundEffect = AVAudioPlayer(contentsOf: alertSoundURL as URL)
+                
+                soundEffect.play()
+                
+            } catch {
+                
+                print("error")
+          }
+        }
+  
+        
+    }
+    
+  }
+
+}
