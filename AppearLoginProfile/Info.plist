@@ -48,6 +48,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Appear needs access to your location</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>syncopate-regular.ttf</string>
@@ -56,11 +58,12 @@
 		<string>Montserrat-Regular.ttf</string>
 		<string>SF-UI-Text-Medium.otf</string>
 		<string>SFNSDisplay.ttf</string>
+		<string>VCR_OSD_MONO.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>ShoppingExperience</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -71,8 +74,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Appear needs access to your location</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

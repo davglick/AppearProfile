@@ -14,7 +14,8 @@ import FBSDKLoginKit
 import GoogleMaps
 import GooglePlaces
 import GoogleMapsCore
-
+import FirebaseDatabase
+import FirebaseStorage
 
 
 @UIApplicationMain
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
+     
         
      GMSServices.provideAPIKey("AIzaSyBsa7G80kOcOMmtVdyDbl5HMfH7qZEtR9E")
      GMSPlacesClient.provideAPIKey("AIzaSyD4Aip5P67auljQw5WT8PnBkOrf-GFe3dQ")

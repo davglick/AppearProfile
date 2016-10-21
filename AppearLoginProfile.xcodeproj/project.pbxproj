@@ -24,6 +24,12 @@
 		4E69FCC71DB7358100D01986 /* AddressList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E69FCC61DB7358000D01986 /* AddressList.swift */; };
 		4E69FCC91DB7881F00D01986 /* swish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCC81DB7881E00D01986 /* swish.mp3 */; };
 		4E69FCCB1DB788C100D01986 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E69FCCA1DB788C100D01986 /* swipe.mp3 */; };
+		4E79B53B1DB88EC9005630B4 /* ShoppingExperience.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */; };
+		4E79B53F1DB8A3D1005630B4 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79B53E1DB8A3D1005630B4 /* StoreListViewController.swift */; };
+		4E79B5411DB8C808005630B4 /* storeProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E79B5401DB8C808005630B4 /* storeProfileCell.xib */; };
+		4E79B5461DB8CACB005630B4 /* StoreProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79B5451DB8CACB005630B4 /* StoreProfileList.swift */; };
+		4E79B5481DB8DAA9005630B4 /* VCR_OSD_MONO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E79B5471DB8DAA9005630B4 /* VCR_OSD_MONO.ttf */; };
+		4E79B54A1DB980B3005630B4 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79B5491DB980B3005630B4 /* Vendor.swift */; };
 		4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */; };
 		4EA8CE341DA2377600AFFC0E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8CE331DA2377600AFFC0E /* Podfile */; };
 		4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAE25531DA7137300EF3CDE /* FacebookLoginBlurBG.png */; };
@@ -53,9 +59,9 @@
 		4E570B861DA2284200E2AC3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E570B891DA2284200E2AC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E570B8C1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppearLoginProfile.xcdatamodel; sourceTree = "<group>"; };
-		4E570B8E1DA2284200E2AC3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E570B8E1DA2284200E2AC3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AppearLoginProfile/Assets.xcassets; sourceTree = "<group>"; };
 		4E570B911DA2284200E2AC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E570B931DA2284200E2AC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E570B931DA2284200E2AC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = AppearLoginProfile/Info.plist; sourceTree = "<group>"; };
 		4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginPopUp.swift; sourceTree = "<group>"; };
 		4E5FE3451DA747CC00B05F54 /* profilePicture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profilePicture@3x.png"; path = "../Appear Profile/Assets/profilePicture@3x.png"; sourceTree = "<group>"; };
 		4E69FCC21DB6CE4F00D01986 /* AddSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AddSound.mp3; path = ../../Downloads/AddSound.mp3; sourceTree = "<group>"; };
@@ -63,7 +69,13 @@
 		4E69FCC61DB7358000D01986 /* AddressList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressList.swift; sourceTree = "<group>"; };
 		4E69FCC81DB7881E00D01986 /* swish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swish.mp3; path = ../../Downloads/swish.mp3; sourceTree = "<group>"; };
 		4E69FCCA1DB788C100D01986 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swipe.mp3; path = ../../Downloads/swipe.mp3; sourceTree = "<group>"; };
-		4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppearLoginProfile.entitlements; sourceTree = "<group>"; };
+		4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingExperience.storyboard; sourceTree = "<group>"; };
+		4E79B53E1DB8A3D1005630B4 /* StoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
+		4E79B5401DB8C808005630B4 /* storeProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = storeProfileCell.xib; sourceTree = "<group>"; };
+		4E79B5451DB8CACB005630B4 /* StoreProfileList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreProfileList.swift; sourceTree = "<group>"; };
+		4E79B5471DB8DAA9005630B4 /* VCR_OSD_MONO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VCR_OSD_MONO.ttf; path = ../../Downloads/VCR_OSD_MONO.ttf; sourceTree = "<group>"; };
+		4E79B5491DB980B3005630B4 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AppearLoginProfile.entitlements; path = AppearLoginProfile/AppearLoginProfile.entitlements; sourceTree = "<group>"; };
 		4E7A579D1DA31AE40044CBBE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4E98677D1DA61C4B0007E162 /* Blair ITC Std.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Blair ITC Std.ttf"; path = "../../Downloads/OnlineWebFonts_COM_96ca96347d9b4ebe52536769ecb40e6f/Blair ITC Std/Blair ITC Std.ttf"; sourceTree = "<group>"; };
 		4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamHTF-Book.ttf"; path = "../../Downloads/iOSAppearApp-master 2/GothamHTF-Book.ttf"; sourceTree = "<group>"; };
@@ -116,7 +128,12 @@
 			children = (
 				4EA8CE331DA2377600AFFC0E /* Podfile */,
 				4EA8CE2E1DA2332F00AFFC0E /* AppearLoginBridgingHeader.h */,
+				4E79B5351DB88D2B005630B4 /* ShoppingExperience */,
 				4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */,
+				4E570B8E1DA2284200E2AC3F /* Assets.xcassets */,
+				4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */,
+				4E570B8B1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld */,
+				4E570B931DA2284200E2AC3F /* Info.plist */,
 				4E570B831DA2284200E2AC3F /* AppearLoginProfile */,
 				4E69FCC11DB6CE3A00D01986 /* Sounds */,
 				4EAE25521DA7132200EF3CDE /* Images */,
@@ -138,17 +155,12 @@
 		4E570B831DA2284200E2AC3F /* AppearLoginProfile */ = {
 			isa = PBXGroup;
 			children = (
-				4E7A579C1DA30E590044CBBE /* AppearLoginProfile.entitlements */,
-				4E570B841DA2284200E2AC3F /* AppDelegate.swift */,
 				4E570B861DA2284200E2AC3F /* ViewController.swift */,
 				4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */,
 				4EB859571DAC8FC8007CA92F /* Your Appear */,
 				4E570B881DA2284200E2AC3F /* Main.storyboard */,
 				4E10B4841DB1BBA100E07B84 /* CircularTransition.swift */,
-				4E570B8E1DA2284200E2AC3F /* Assets.xcassets */,
 				4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */,
-				4E570B931DA2284200E2AC3F /* Info.plist */,
-				4E570B8B1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld */,
 			);
 			path = AppearLoginProfile;
 			sourceTree = "<group>";
@@ -164,6 +176,30 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		4E79B5351DB88D2B005630B4 /* ShoppingExperience */ = {
+			isa = PBXGroup;
+			children = (
+				4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */,
+				4E79B5401DB8C808005630B4 /* storeProfileCell.xib */,
+				4E79B5491DB980B3005630B4 /* Vendor.swift */,
+				4E79B53E1DB8A3D1005630B4 /* StoreListViewController.swift */,
+				4E570B841DA2284200E2AC3F /* AppDelegate.swift */,
+				4E79B5451DB8CACB005630B4 /* StoreProfileList.swift */,
+			);
+			name = ShoppingExperience;
+			path = AppearLoginProfile;
+			sourceTree = "<group>";
+		};
+		4E79B54B1DB980F3005630B4 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				4E69FCC61DB7358000D01986 /* AddressList.swift */,
+				4E16948C1DB5AFB800301B77 /* AddressCell.swift */,
+				4E16948E1DB5C38A00301B77 /* AddressModel.swift */,
+			);
+			name = class;
+			sourceTree = "<group>";
+		};
 		4EAE25521DA7132200EF3CDE /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +213,7 @@
 		4EB2B0851DA4B47B00181DD5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4E79B5471DB8DAA9005630B4 /* VCR_OSD_MONO.ttf */,
 				4E9867811DA666A30007E162 /* SFNSDisplay.ttf */,
 				4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */,
 				4E98677F1DA61C9D0007E162 /* Montserrat-Regular.ttf */,
@@ -209,10 +246,8 @@
 		4EB859591DADECA2007CA92F /* Address Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				4E79B54B1DB980F3005630B4 /* class */,
 				4EB4C2DB1DAF5C9200691EC4 /* AddressMapView.swift */,
-				4E16948E1DB5C38A00301B77 /* AddressModel.swift */,
-				4E16948C1DB5AFB800301B77 /* AddressCell.swift */,
-				4E69FCC61DB7358000D01986 /* AddressList.swift */,
 				4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */,
 			);
 			name = "Address Gallery";
@@ -291,6 +326,7 @@
 				4E5FE3461DA747CC00B05F54 /* profilePicture@3x.png in Resources */,
 				4E69FCC51DB6D73500D01986 /* Pop.mp3 in Resources */,
 				4EB859521DAC89C8007CA92F /* syncopate-regular.ttf in Resources */,
+				4E79B5481DB8DAA9005630B4 /* VCR_OSD_MONO.ttf in Resources */,
 				4E570B921DA2284200E2AC3F /* LaunchScreen.storyboard in Resources */,
 				4E570B8F1DA2284200E2AC3F /* Assets.xcassets in Resources */,
 				4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */,
@@ -301,8 +337,10 @@
 				4E69FCCB1DB788C100D01986 /* swipe.mp3 in Resources */,
 				4EAE25561DA71B6800EF3CDE /* facebookPopUpView.png in Resources */,
 				4E69FCC31DB6CE4F00D01986 /* AddSound.mp3 in Resources */,
+				4E79B5411DB8C808005630B4 /* storeProfileCell.xib in Resources */,
 				4E69FCC91DB7881F00D01986 /* swish.mp3 in Resources */,
 				4EB859501DAC89BA007CA92F /* SF-UI-Text-Medium.otf in Resources */,
+				4E79B53B1DB88EC9005630B4 /* ShoppingExperience.storyboard in Resources */,
 				4EAE25541DA7137300EF3CDE /* FacebookLoginBlurBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,14 +401,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E69FCC71DB7358100D01986 /* AddressList.swift in Sources */,
+				4E79B53F1DB8A3D1005630B4 /* StoreListViewController.swift in Sources */,
 				4E16948D1DB5AFB800301B77 /* AddressCell.swift in Sources */,
 				4E570B871DA2284200E2AC3F /* ViewController.swift in Sources */,
 				4EB4C2DC1DAF5C9200691EC4 /* AddressMapView.swift in Sources */,
+				4E79B54A1DB980B3005630B4 /* Vendor.swift in Sources */,
 				4E570B851DA2284200E2AC3F /* AppDelegate.swift in Sources */,
 				4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */,
 				4E7A579E1DA31AE40044CBBE /* ProfileViewController.swift in Sources */,
 				4E10B4851DB1BBA100E07B84 /* CircularTransition.swift in Sources */,
 				4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */,
+				4E79B5461DB8CACB005630B4 /* StoreProfileList.swift in Sources */,
 				4E16948F1DB5C38A00301B77 /* AddressModel.swift in Sources */,
 				4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */,
 				4E23C5D41DAB1981001022A9 /* ProfileView.swift in Sources */,
@@ -555,7 +596,8 @@
 				4E570B8C1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodel */,
 			);
 			currentVersion = 4E570B8C1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodel */;
-			path = AppearLoginProfile.xcdatamodeld;
+			name = AppearLoginProfile.xcdatamodeld;
+			path = AppearLoginProfile/AppearLoginProfile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
