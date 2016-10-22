@@ -42,6 +42,7 @@
 		4EB859531DAC89CB007CA92F /* GothamHTF-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E98677E1DA61C6C0007E162 /* GothamHTF-Book.ttf */; };
 		4EB859541DAC89CE007CA92F /* SFNSDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E9867811DA666A30007E162 /* SFNSDisplay.ttf */; };
 		4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */; };
+		4ED51B541DBB0DD30075375E /* facebook Login View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED51B531DBB0DD30075375E /* facebook Login View.swift */; };
 		4EEE70441DA26CF2002FF72B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */; };
 		4EFBBC7E1DAB505500F20D34 /* ViewProfilePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */; };
 		E0D6C6B4C3DB1221373E2A9C /* Pods_AppearLoginProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */; };
@@ -69,9 +70,9 @@
 		4E69FCC61DB7358000D01986 /* AddressList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressList.swift; sourceTree = "<group>"; };
 		4E69FCC81DB7881E00D01986 /* swish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swish.mp3; path = ../../Downloads/swish.mp3; sourceTree = "<group>"; };
 		4E69FCCA1DB788C100D01986 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swipe.mp3; path = ../../Downloads/swipe.mp3; sourceTree = "<group>"; };
-		4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingExperience.storyboard; sourceTree = "<group>"; };
+		4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ShoppingExperience.storyboard; path = AppearLoginProfile/ShoppingExperience.storyboard; sourceTree = "<group>"; };
 		4E79B53E1DB8A3D1005630B4 /* StoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
-		4E79B5401DB8C808005630B4 /* storeProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = storeProfileCell.xib; sourceTree = "<group>"; };
+		4E79B5401DB8C808005630B4 /* storeProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = storeProfileCell.xib; path = AppearLoginProfile/storeProfileCell.xib; sourceTree = "<group>"; };
 		4E79B5451DB8CACB005630B4 /* StoreProfileList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreProfileList.swift; sourceTree = "<group>"; };
 		4E79B5471DB8DAA9005630B4 /* VCR_OSD_MONO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VCR_OSD_MONO.ttf; path = ../../Downloads/VCR_OSD_MONO.ttf; sourceTree = "<group>"; };
 		4E79B5491DB980B3005630B4 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		4EB2B0861DA4B49800181DD5 /* syncopate-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "syncopate-regular.ttf"; path = "../../Downloads/iOSAppearApp-master 2/syncopate-regular.ttf"; sourceTree = "<group>"; };
 		4EB4C2DB1DAF5C9200691EC4 /* AddressMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressMapView.swift; sourceTree = "<group>"; };
 		4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressGalleryView.swift; sourceTree = "<group>"; };
+		4ED51B531DBB0DD30075375E /* facebook Login View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "facebook Login View.swift"; path = "../facebook Login View.swift"; sourceTree = "<group>"; };
 		4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EFBBC7D1DAB505500F20D34 /* ViewProfilePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfilePopUp.swift; sourceTree = "<group>"; };
 		726B5E968CAB1F910F08A1DD /* Pods_AppearLoginProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppearLoginProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,9 @@
 			children = (
 				4EA8CE331DA2377600AFFC0E /* Podfile */,
 				4EA8CE2E1DA2332F00AFFC0E /* AppearLoginBridgingHeader.h */,
+				4ED51B511DBAF6050075375E /* Storyboard */,
+				4E570B881DA2284200E2AC3F /* Main.storyboard */,
+				4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */,
 				4E79B5351DB88D2B005630B4 /* ShoppingExperience */,
 				4EEE70431DA26CF2002FF72B /* GoogleService-Info.plist */,
 				4E570B8E1DA2284200E2AC3F /* Assets.xcassets */,
@@ -155,10 +160,10 @@
 		4E570B831DA2284200E2AC3F /* AppearLoginProfile */ = {
 			isa = PBXGroup;
 			children = (
+				4ED51B531DBB0DD30075375E /* facebook Login View.swift */,
 				4E570B861DA2284200E2AC3F /* ViewController.swift */,
 				4E5FE3431DA7332300B05F54 /* FacebookLoginPopUp.swift */,
 				4EB859571DAC8FC8007CA92F /* Your Appear */,
-				4E570B881DA2284200E2AC3F /* Main.storyboard */,
 				4E10B4841DB1BBA100E07B84 /* CircularTransition.swift */,
 				4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */,
 			);
@@ -179,8 +184,6 @@
 		4E79B5351DB88D2B005630B4 /* ShoppingExperience */ = {
 			isa = PBXGroup;
 			children = (
-				4E79B53A1DB88EC9005630B4 /* ShoppingExperience.storyboard */,
-				4E79B5401DB8C808005630B4 /* storeProfileCell.xib */,
 				4E79B5491DB980B3005630B4 /* Vendor.swift */,
 				4E79B53E1DB8A3D1005630B4 /* StoreListViewController.swift */,
 				4E570B841DA2284200E2AC3F /* AppDelegate.swift */,
@@ -251,6 +254,24 @@
 				4EB8595A1DADED5F007CA92F /* AddressGalleryView.swift */,
 			);
 			name = "Address Gallery";
+			sourceTree = "<group>";
+		};
+		4ED51B511DBAF6050075375E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4ED51B521DBAF61F0075375E /* XIB files */,
+			);
+			name = Storyboard;
+			path = AppearLoginProfile;
+			sourceTree = "<group>";
+		};
+		4ED51B521DBAF61F0075375E /* XIB files */ = {
+			isa = PBXGroup;
+			children = (
+				4E79B5401DB8C808005630B4 /* storeProfileCell.xib */,
+			);
+			name = "XIB files";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +434,7 @@
 				4EB8595B1DADED5F007CA92F /* AddressGalleryView.swift in Sources */,
 				4E79B5461DB8CACB005630B4 /* StoreProfileList.swift in Sources */,
 				4E16948F1DB5C38A00301B77 /* AddressModel.swift in Sources */,
+				4ED51B541DBB0DD30075375E /* facebook Login View.swift in Sources */,
 				4E5FE3441DA7332300B05F54 /* FacebookLoginPopUp.swift in Sources */,
 				4E23C5D41DAB1981001022A9 /* ProfileView.swift in Sources */,
 				4E570B8D1DA2284200E2AC3F /* AppearLoginProfile.xcdatamodeld in Sources */,
@@ -428,6 +450,7 @@
 				4E570B891DA2284200E2AC3F /* Base */,
 			);
 			name = Main.storyboard;
+			path = AppearLoginProfile;
 			sourceTree = "<group>";
 		};
 		4E570B901DA2284200E2AC3F /* LaunchScreen.storyboard */ = {

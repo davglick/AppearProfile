@@ -10,8 +10,10 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
+import SDWebImage
 
-class StoreListViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+
+class StoreListViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate {
     
 
     @IBOutlet var list: UITableView!
@@ -79,9 +81,7 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
                 print(Error.localizedDescription)
                 
         }
-        
-        
-        
+  
         // make the nav bar transparent 
         
         if let navigationBar = navigationController?.navigationBar {
@@ -91,21 +91,14 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
             navigationController?.view.backgroundColor = .clear
             
             // Reference to table view nib file
-            
             let nib = UINib(nibName: "storeProfileCell", bundle: nil)
             list.register(nib, forCellReuseIdentifier: "Cell")
             list.separatorStyle = .none
             list.showsHorizontalScrollIndicator = false
             list.showsVerticalScrollIndicator = false
-            
 
- 
-    
         }
     }
-    
-
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -116,8 +109,7 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
        return self.stores.count
-        
-        
+ 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -126,15 +118,44 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StoreProfileList
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
-        
+       // getting web image URL content
+
+        DispatchQueue.global(qos: .background).async {
+            
+            let cover = self.stores[indexPath.row].coverURL
+            let imageURL:NSURL? = NSURL(string: cover! )
+            if let url = imageURL {
+                cell.cover.sd_setImage(with: url as URL!)
+
+            // testing speed //
+   
+                    let methodStart = Date()
+                    
+                    let methodFinish = Date()
+                    let executionTime = methodFinish.timeIntervalSince(methodStart)
+                    print("Execution Time: \(executionTime)")
+                    print("************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************")
+                
+        // testing speed //
+                
+       }
+    }
+
+        // Display the vendor name
          cell.vendorName.text = stores[indexPath.row].name
-        
+
         return cell
     }
 
- }
-
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("doing")
+        
+    }
+    
+}

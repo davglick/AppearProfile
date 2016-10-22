@@ -36,7 +36,7 @@ init(coverURL: String, coverPhoto: String, name: String, key: String = "") {
 init(snapshot: FIRDataSnapshot) {
     
     
-    coverURL = (snapshot.value as? NSDictionary)?["coverURL"] as? String
+    coverURL = (snapshot.value as? NSDictionary)?["background"] as? String
     coverPhoto = UIImageView()
     name = (snapshot.value as? NSDictionary)? ["name"] as? String
     

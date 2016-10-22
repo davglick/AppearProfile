@@ -14,6 +14,8 @@ class StoreProfileList: UITableViewCell {
     @IBOutlet weak var vendorName: UILabel!
     @IBOutlet weak var cover: UIImageView!
     @IBOutlet weak var opacity: UIImageView!
+ 
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

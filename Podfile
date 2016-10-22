@@ -18,7 +18,7 @@ target 'AppearLoginProfile' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
-  
+  pod 'SDWebImage', '~>3.8'
 
 
 end
