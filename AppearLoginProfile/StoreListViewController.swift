@@ -15,6 +15,8 @@ import SDWebImage
 
 class StoreListViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate {
     
+    @IBOutlet var scrollView: UITableView!
+    
 
     @IBOutlet var list: UITableView!
     
@@ -31,36 +33,19 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+               
+        
+   
+    
+        
         list.delegate = self
         list.dataSource = self
         
         
         databaseRef = FIRDatabase.database().reference().child("Vendor")
-        
-        /*
-        
-        self.databaseRef.child("Vendor").observe(.value, with: { snapshot in
-            var newItems = [Vendor]()
-            for item in snapshot.children {
-                let vendor = Vendor(snapshot: item as! FIRDataSnapshot)
-                newItems.append(vendor)
-            }
-            
-            self.stores = newItems
-            //DispatchQueue.main.asynchronously() {
-            self.list.reloadData()
-
-        }) { (Error) in
-            
-            
-            print(Error.localizedDescription)
-            
-        }
- */
-
- 
-    
-        
+   
         databaseRef.observe(.value, with: { (snapshot) in
             
             
@@ -150,7 +135,8 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
 
         return cell
     }
-
+    
+  
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -158,4 +144,8 @@ class StoreListViewController: UIViewController,UITableViewDelegate, UITableView
         
     }
     
+    @IBAction func profileView(_ sender: AnyObject) {
+        
+        self.performSegue(withIdentifier: "profileSegue", sender: self)
+    }
 }

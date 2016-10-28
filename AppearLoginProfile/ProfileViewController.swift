@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
    // @IBOutlet var closePopUp: UIButton!
    
    
+    @IBOutlet var storeButton: UIBarButtonItem!
     
     @IBOutlet var profileCellView: UIView!
     
@@ -87,7 +88,6 @@ class ProfileViewController: UIViewController {
                 let data = NSData(contentsOf: photoUrl!)
                 self.profilePicture.image = UIImage(data: data! as Data)
                 
-                
                 // Firebase storage
                 
                 
@@ -105,10 +105,14 @@ class ProfileViewController: UIViewController {
                 
                 self.ref.child("Users").child(uid).setValue(["userName": name, "UserEmail": email])
                
-                
+               
+
+
     
                 
                 // Refeance to our storage service
+                
+                /*
                 let storageRef = storage.reference(forURL: "gs://appearprofile.appspot.com")
                 
                 
@@ -161,6 +165,8 @@ class ProfileViewController: UIViewController {
     
                             
     })
+ 
+ */
             
         } else {
                     
@@ -198,6 +204,12 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func storeList(_ sender: AnyObject) {
+        
+               
+        
+        
+    }
 }
 
 

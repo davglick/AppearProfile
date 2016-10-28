@@ -11,8 +11,7 @@ import UIKit
 class AddressCell: UITableViewCell {
     @IBOutlet var addressStringLabel: UILabel!
     @IBOutlet var selectedAddressTick: UIImageView!
-    
-    
+
     override func awakeFromNib() {
         
         super.awakeFromNib()

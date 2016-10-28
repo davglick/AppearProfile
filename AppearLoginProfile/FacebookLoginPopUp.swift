@@ -32,6 +32,7 @@ class FacebookLoginPopUp: UIViewController {
         super.viewDidLoad()
 
         self.FaceBookLoginView.layer.cornerRadius = 4
+        
        
         
     }

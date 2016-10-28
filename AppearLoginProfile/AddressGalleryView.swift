@@ -20,6 +20,7 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
     var animator: UIDynamicAnimator!
     
   
+    var scroll = AppearHomeNavigation()
     
     let addressMapView = AddressMapView()
     
@@ -46,18 +47,21 @@ class AddressGalleryView: UIViewController, UIViewControllerTransitioningDelegat
     var addressArray = [addAddress]()
     
     var databaseRef: FIRDatabaseReference!
-    
-  
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+   // scroll.scrollView.isScrollEnabled = false;
+        
+   // self.scroll.scrollView.isScrollEnabled = false
+
     
         addressTable.delegate = self
         addressTable.dataSource = self
         
-        
-    
+
         // Initiate the Firebase database
         
          if let user = FIRAuth.auth()?.currentUser {
@@ -214,15 +218,16 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     
     }
 
-func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)  {
     if editingStyle == .delete {
 
+     
         // Delete the row from the data source
         let ref = addressArray[indexPath.row].ref
         ref!.removeValue()
         addressArray.remove(at: indexPath.row)
         
-        tableView.deleteRows(at: [indexPath], with: .none)
+        tableView.deleteRows(at: [indexPath], with: .left)
         
         // Trigger sound effect when the add address button is pressed
         

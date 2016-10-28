@@ -16,8 +16,9 @@ import FBSDKCoreKit
 import AVFoundation
 
 class ViewProfilePopUp: UIViewController {
-  
     
+    var scrollView = AppearHomeNavigation()
+
     @IBOutlet var profileName: UILabel!
  
     @IBOutlet var profileView: UIView!
@@ -41,11 +42,18 @@ class ViewProfilePopUp: UIViewController {
      
      
      // Go back to the login screen
+ 
+        
+    let FBPop = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FBPopUp") as! FBPopUpView
+    self.addChildViewController(FBPop)
+    FBPop.view.frame = self.view.frame
+    self.view.addSubview(FBPop.view)
+    FBPop.didMove(toParentViewController: self)
      
-     let mainStoryBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
-     let ViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginScreen")
+    // let mainStoryBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+    // let ViewController: UIViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginScreen")
      
-     self.present(ViewController, animated: true, completion:  nil)
+    // self.present(ViewController, animated: true, completion:  nil)
         
         
         let LogoutSound = Bundle.main.path(forResource: "Pop", ofType: "mp3")
@@ -80,10 +88,11 @@ class ViewProfilePopUp: UIViewController {
     var animator: UIDynamicAnimator!
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+    
         // make the profile picture round
+        
+        
         
         self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width/2
         self.profilePicture.layer.borderColor = UIColor(red: 160/255, green: 160/255, blue: 159/255, alpha: 1).cgColor
@@ -122,6 +131,15 @@ class ViewProfilePopUp: UIViewController {
         
             
             }
+        
+        
+        func viewDidLoad() {
+            super.viewDidLoad()
+            
+          
+            
+        }
+
      
     }
 
@@ -142,7 +160,7 @@ class ViewProfilePopUp: UIViewController {
             
         }) { (success: Bool) in
             self.profileView.removeFromSuperview()
-            
+ 
         }
     }
 

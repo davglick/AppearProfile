@@ -19,6 +19,7 @@ target 'AppearLoginProfile' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'SDWebImage', '~>3.8'
+  pod 'SwiftyJSON'
 
 
 end
