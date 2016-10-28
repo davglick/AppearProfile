@@ -20,6 +20,7 @@ target 'AppearLoginProfile' do
   pod 'GooglePlacePicker'
   pod 'SDWebImage', '~>3.8'
   pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.0'
 
 
 end

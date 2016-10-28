@@ -12,7 +12,7 @@ import SDWebImage
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
-
+import Alamofire
 
 class VendorPage: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -43,42 +43,6 @@ class VendorPage: UIViewController, UICollectionViewDelegate, UICollectionViewDa
        
     }
     
-    func getStore() {
-        
-        let string: String? = "https://\(self.store.APIToken!)@\(self.store.storeDomain!).myshopify.com/admin/products.json?fields=id,sku,images,title,vendor,variants,product_type,body_html,options"
-        let url: NSURL? = NSURL(string: string!)!
-        //let request = NSURLRequest(URL: url)
-        let session = URLSession.shared
-        
-     //   session.dataTaskWithURL(url as! URL, completionHandler: { ( data: NSData?, response: URLResponse?, error: NSError?) -> Void in
-            // Make sure we get an OK response
-            guard let realResponse = response as? NSHTTPURLResponse ,
-                realResponse.statusCode == 200
-                else {
-                    print("Not a 200 response")
-                    return
-            }
-            
-            // Read the JSON
-            do {
-                
-                let shop = JSON(data: data!)
-                var x = [Product]()
-                for test in shop["products"] {
-                    let product = Product(store: test.1)
-                    x.append(product)
-                }
-                self.products = x
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.collectionView.reloadData()
-                }
-                //let key: AnyObject = Array(shop.dictionaryValue.keys)[0]
-                // let value = shop[key as! String]
-                //print(value[0]["images"][1]["src"])
-            }
-        }).resume()
-    }
-
     
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -136,5 +100,5 @@ class VendorPage: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         
     }
 
-   
 }
+
